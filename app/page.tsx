@@ -176,28 +176,36 @@ export default function Home() {
     ? projects
     : projects.filter(p => p.category === activeFilter);
 
-  const handleEmailRedirect = (e) => {
-    e.preventDefault();
+  const handleEmailRedirect = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    const formData = new FormData(e.target);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const subject = formData.get('subject');
-    const message = formData.get('message');
+  const formData = new FormData(e.target as HTMLFormElement);
+  const name = formData.get('name') as string;
+  const email = formData.get('email') as string;
+  const subject = formData.get('subject') as string;
+  const message = formData.get('message') as string;
 
-    const yourEmail = 'Mrmindgamer40@gmail.com';
+  const yourEmail = 'Mrmindgamer40@gmail.com';
 
-    const emailBody = `
+  const emailBody = `
 👤 Name: ${name}
+
 📧 Email: ${email}
+
 📝 Message:
  ${message}
+
 ---
-✨ Sent from Nishant Sharma's Portfolio
+✨ Sent from Nishant Sharma's Portfolio Website
   `.trim();
 
-    window.location.href = `mailto:${yourEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-  };
+  // ✅ FIXED: Extract to variable first
+  const subjectText = subject || `Portfolio Contact from ${name}`;
+  const encodedSubject = encodeURIComponent(subjectText);
+  const encodedBody = encodeURIComponent(emailBody);
+
+  window.location.href = `mailto:${yourEmail}?subject=${encodedSubject}&body=${encodedBody}`;
+};
 
   // ==================== RETURN JSX ====================
   return (

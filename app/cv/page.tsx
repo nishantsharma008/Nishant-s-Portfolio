@@ -1,4 +1,4 @@
-""use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -9,24 +9,23 @@ import { useRouter } from "next/navigation";
 export default function CVPage() {
   const router = useRouter();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [scrollY, setScrollY] = useState(0);                                                                       
+  const [scrollY, setScrollY] = useState(0);
+  
   useEffect(() => {
-    // ✅ FIXED: Added MouseEvent type to 'e' parameter
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     
-    // ✅ FIXED: Added Event type (optional but good practice)
     const handleScroll = (_event: Event) => {
       setScrollY(window.scrollY);
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("scroll", handleScroll);
     
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -71,8 +70,8 @@ export default function CVPage() {
             className="absolute w-96 h-96 rounded-2xl opacity-35 animate-float-1 transition-transform duration-1000"
             style={{
               transform: `translate(${mousePosition.x * 0.01}px, ${mousePosition.y * 0.01}px)`,
-              top: '10%',
-              left: '-5%',
+              top: "10%",
+              left: "-5%",
             }}
           >
             <Image
@@ -87,8 +86,8 @@ export default function CVPage() {
             className="absolute w-72 h-72 rounded-2xl opacity-30 animate-float-2 transition-transform duration-1200"
             style={{
               transform: `translate(${-mousePosition.x * 0.015}px, ${-mousePosition.y * 0.015}px)`,
-              bottom: '10%',
-              right: '-3%',
+              bottom: "10%",
+              right: "-3%",
             }}
           >
             <Image
@@ -103,8 +102,8 @@ export default function CVPage() {
             className="absolute w-48 h-48 rounded-xl opacity-25 animate-float-3 transition-transform duration-800"
             style={{
               transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
-              top: '50%',
-              right: '10%',
+              top: "50%",
+              right: "10%",
             }}
           >
             <Image
@@ -119,7 +118,7 @@ export default function CVPage() {
         <div 
           className="fixed w-[500px] h-[500px] rounded-full opacity-30 blur-3xl pointer-events-none z-5 transition-all duration-300"
           style={{ 
-            background: 'radial-gradient(circle, rgba(6,182,212,0.4) 0%, transparent 70%)',
+            background: "radial-gradient(circle, rgba(6,182,212,0.4) 0%, transparent 70%)",
             left: mousePosition.x - 250,
             top: mousePosition.y - 250,
           }}
@@ -128,8 +127,8 @@ export default function CVPage() {
         <div 
           className="absolute inset-0 opacity-[0.04] z-10"
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px',
+            backgroundImage: "linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
           }}
         />
 
@@ -159,7 +158,7 @@ export default function CVPage() {
             >
               <FaArrowLeft className="group-hover/btn:-translate-x-1 transition-transform duration-200" />
               <span className="hidden sm:inline">Back to Home</span>
-              <span className="sm:hidden">Back to Home </span>
+              <span className="sm:hidden">Back</span>
             </button>
           </div>
           
@@ -229,7 +228,7 @@ export default function CVPage() {
               </div>
             </div>
 
-            {/* CV Preview Image - CLEAN NO OVERLAY TEXT */}
+            {/* CV Preview Image */}
             <div className="relative w-full aspect-[8.5/11] max-w-xl mx-auto mb-6 rounded-xl overflow-hidden border border-white/10 group-hover:border-cyan-500/50 transition-colors duration-300 bg-white">
               <Image
                 src="/cv.jpeg"
@@ -240,11 +239,10 @@ export default function CVPage() {
                 quality={95}
               />
               
-              {/* Simple subtle overlay on hover - NO TEXT */}
               <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </div>
 
-            {/* Download Section - NO GREEN BADGE */}
+            {/* Download Section */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-6">
               
               <a
@@ -264,7 +262,6 @@ export default function CVPage() {
                 
                 <span className="absolute inset-0 bg-cyan-400/20 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300"></span>
                 
-                {/* Button Content - CLEAN NO BADGE */}
                 <span className="relative z-10 flex items-center gap-2">
                   <FaDownload className="text-lg group-hover:animate-bounce" />
                   <span>Download My CV</span>
