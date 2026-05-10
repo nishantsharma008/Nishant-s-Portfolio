@@ -1,4 +1,4 @@
-"use client";
+""use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -9,14 +9,15 @@ import { useRouter } from "next/navigation";
 export default function CVPage() {
   const router = useRouter();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [scrollY, setScrollY] = useState(0);
-
+  const [scrollY, setScrollY] = useState(0);                                                                       
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    // ✅ FIXED: Added MouseEvent type to 'e' parameter
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     
-    const handleScroll = () => {
+    // ✅ FIXED: Added Event type (optional but good practice)
+    const handleScroll = (_event: Event) => {
       setScrollY(window.scrollY);
     };
 
