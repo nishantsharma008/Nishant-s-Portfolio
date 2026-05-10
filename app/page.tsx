@@ -1593,7 +1593,7 @@ export default function Home() {
 
               <div className="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {[
-                  { title: "15+", subtitle: "Projects", icon: <HiOutlineRocketLaunch className="text-cyan-300 text-lg" /> },
+                  { title: "3+", subtitle: "Projects", icon: <HiOutlineRocketLaunch className="text-cyan-300 text-lg" /> },
                   { title: "2+", subtitle: "Internships", icon: <MdWorkOutline className="text-blue-300 text-lg" /> },
                   { title: "Clients", subtitle: "Soon.....", icon: <FaUsers className="text-fuchsia-300 text-lg" /> },
                 ].map((item) => (
