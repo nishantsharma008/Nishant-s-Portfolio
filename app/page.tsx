@@ -465,7 +465,7 @@ export default function Home() {
 
                   <div className="absolute top-1/2 right-6 transform -translate-y-1/2">
                     <div className="flex flex-col items-center gap-1">
-                      <span className="text-[9px] font-mono text-blue-400/80 tracking-wider">15+</span>
+                      <span className="text-[9px] font-mono text-blue-400/80 tracking-wider">3+</span>
                       <div className="w-3 h-3 rounded-full bg-blue-400 node-pulse-delay shadow-lg shadow-blue-400/50"></div>
                     </div>
                   </div>
@@ -639,167 +639,7 @@ export default function Home() {
           </p>
         </div>
 
-        {/* MOBILE RADAR */}
-        <div className="lg:hidden flex justify-center items-center mb-12">
-          <div className="relative bg-gradient-to-br from-black via-slate-950 to-blue-950 border-2 border-cyan-500/40 rounded-3xl p-6 overflow-hidden w-full max-w-[400px] shadow-2xl shadow-cyan-500/20 group hover:border-cyan-400/60 hover:shadow-cyan-400/30 transition-all duration-700">
-
-            <div className="absolute top-3 left-3 w-10 h-10 border-t-2 border-l-2 border-cyan-400/70 rounded-tl-lg corner-bracket-hud"></div>
-            <div className="absolute top-3 right-3 w-10 h-10 border-t-2 border-r-2 border-cyan-400/70 rounded-tr-lg corner-bracket-hud-delayed"></div>
-            <div className="absolute bottom-3 left-3 w-10 h-10 border-b-2 border-l-2 border-cyan-400/70 rounded-bl-lg corner-bracket-hud"></div>
-            <div className="absolute bottom-3 right-3 w-10 h-10 border-b-2 border-r-2 border-cyan-400/70 rounded-br-lg corner-bracket-hud-delayed"></div>
-
-            <div className="absolute inset-0 pointer-events-none opacity-5 scanlines-overlay"></div>
-            <div className="absolute inset-0 opacity-[0.03] hud-grid-pattern"></div>
-
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-32 bg-gradient-to-b from-cyan-500/20 via-cyan-500/5 to-transparent blur-2xl hud-glow-top"></div>
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-24 bg-gradient-to-t from-blue-600/15 via-blue-600/5 to-transparent blur-2xl hud-glow-bottom"></div>
-
-            <div className="absolute top-12 left-10 w-1.5 h-1.5 bg-cyan-400 rounded-full particle-float-1 shadow-lg shadow-cyan-400/80"></div>
-            <div className="absolute top-20 right-14 w-1 h-1 bg-blue-400 rounded-full particle-float-2 shadow-lg shadow-blue-400/80"></div>
-            <div className="absolute bottom-20 left-16 w-1.5 h-1.5 bg-cyan-300 rounded-full particle-float-3 shadow-lg shadow-cyan-300/80"></div>
-            <div className="absolute bottom-16 right-12 w-1 h-1 bg-blue-300 rounded-full particle-float-4 shadow-lg shadow-blue-400/80"></div>
-
-            <div className="relative z-10 mb-6">
-              <div className="flex items-center justify-center gap-3">
-                <div className="w-2.5 h-2.5 bg-cyan-400 rounded-full animate-pulse shadow-lg shadow-cyan-400/90 hud-status-dot"></div>
-                <h3 className="text-xl font-bold text-cyan-300 tracking-wider uppercase drop-shadow-[0_0_10px_rgba(6,182,212,0.6)] hud-title-glow">
-                  Skills Overview
-                </h3>
-                <div className="w-2.5 h-2.5 bg-blue-400 rounded-full animate-pulse shadow-lg shadow-blue-400/90 hud-status-dot-delayed"></div>
-              </div>
-              <div className="mt-2 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent hud-subtitle-line"></div>
-            </div>
-
-            <div className="relative w-full aspect-square max-w-[280px] mx-auto relative z-10">
-              <svg viewBox="0 0 240 240" className="w-full h-full relative z-10 hover:scale-[1.02] transition-transform duration-500">
-                <defs>
-                  <linearGradient id="hudFillGradientMobile" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.75">
-                      <animate attributeName="stop-color" values="#06b6d4;#0ea5e9;#06b6d4" dur="3s" repeatCount="indefinite" />
-                    </stop>
-                    <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.55">
-                      <animate attributeName="stop-color" values="#3b82f6;#2563eb;#3b82f6" dur="3s" repeatCount="indefinite" />
-                    </stop>
-                    <stop offset="100%" stopColor="#1e40af" stopOpacity="0.45" />
-                  </linearGradient>
-
-                  <linearGradient id="hudStrokeGradientMobile" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#22d3ee" stopOpacity="1" />
-                    <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="#3b82f6" stopOpacity="1" />
-                  </linearGradient>
-
-                  <filter id="hudGlowMobile" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur stdDeviation="4" result="blur" />
-                    <feMerge>
-                      <feMergeNode in="blur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-
-                  <filter id="intenseGlowMobile" x="-100%" y="-100%" width="300%" height="300%">
-                    <feGaussianBlur stdDeviation="6" result="blur" />
-                    <feComponentTransfer in="blur" result="boost">
-                      <feFuncA type="linear" slope="1.5" />
-                    </feComponentTransfer>
-                    <feMerge>
-                      <feMergeNode in="boost" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-
-                {[0.18, 0.36, 0.54, 0.72, 0.9, 1].map((scale, i) => (
-                  <polygon
-                    key={`grid-mobile-${i}`}
-                    points="120,28 220,98 188,216 52,216 20,98"
-                    fill="none"
-                    stroke={`rgba(6, 182, 212, ${0.06 + i * 0.04})`}
-                    strokeWidth={i === 5 ? "2" : i >= 3 ? "1.2" : "0.8"}
-                    transform={`scale(${scale}) translate(${(1 - scale) * 120}px, ${(1 - scale) * 120}px)`}
-                    className={i >= 4 ? 'hud-grid-pulse' : ''}
-                  />
-                ))}
-
-                {[[120, 28], [220, 98], [188, 216], [52, 216], [20, 98]].map(([x, y], i) => (
-                  <line
-                    key={`axis-mobile-${i}`}
-                    x1="120"
-                    y1="120"
-                    x2={x}
-                    y2={y}
-                    stroke="rgba(34, 211, 238, 0.2)"
-                    strokeWidth="1"
-                    className="hud-axis-glow"
-                    style={{ animationDelay: `${i * 0.25}s` }}
-                  />
-                ))}
-
-                <polygon
-                  points="120,45 203,105 174,190 66,190 37,105"
-                  fill="url(#hudFillGradientMobile)"
-                  stroke="url(#hudStrokeGradientMobile)"
-                  strokeWidth="2.5"
-                  strokeLinejoin="round"
-                  className="hud-data-polygon"
-                  style={{ filter: 'drop-shadow(0 0 20px rgba(6, 182, 212, 0.7)) url(#hudGlowMobile)' }}
-                >
-                  <animate
-                    attributeName="points"
-                    values="120,45 203,105 174,190 66,190 37,105;120,42 206,103 177,193 63,193 34,103;120,45 203,105 174,190 66,190 37,105"
-                    dur="4s"
-                    repeatCount="indefinite"
-                  />
-                </polygon>
-
-                {
-                  [[120, 45], [203, 105], [174, 190], [66, 190], [37, 105]].map(([x, y], idx) => (
-                    <g key={`pt-mobile-${idx}`} className="cursor-pointer group/hud-point">
-                      <circle cx={x} cy={y} r="12" fill="none" stroke="#22d3ee" strokeWidth="1.5" opacity="0.5" className="hud-point-outer-ring" style={{ animationDelay: `${idx * 0.35}s` }}>
-                        <animate attributeName="r" values="10;16;10" dur="2.5s" repeatCount="indefinite" begin={`${idx * 0.35}`} />
-                        <animate attributeName="opacity" values="0.6;0.15;0.6" dur="2.5s" repeatCount="indefinite" begin={`${idx * 0.35}`} />
-                      </circle>
-                      <circle cx={x} cy={y} r="7" fill="none" stroke="#3b82f6" strokeWidth="2" opacity="0.65" className="hud-point-middle-ring" style={{ animationDelay: `${idx * 0.35 + 0.15}` }}>
-                        <animate attributeName="r" values="6;8.5;6" dur="2s" repeatCount="indefinite" begin={`${idx * 0.35 + 0.15}`} />
-                      </circle>
-                      <circle cx={x} cy={y} r="5" fill="#22d3ee" className="hud-point-core" style={{ filter: 'url(#intenseGlowMobile)', animationDelay: `${idx * 0.2}` }}>
-                        <animate attributeName="r" values="4.5;6;4.5" dur="1.8s" repeatCount="indefinite" begin={`${idx * 0.2}`} />
-                      </circle>
-                      <circle cx={x} cy={y} r="2.2" fill="white" opacity="0.95" />
-                    </g>
-                  ))
-                }
-
-                <text x="120" y="17" textAnchor="middle" fill="#e0f2fe" fontSize="13" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ filter: 'drop-shadow(0 0 6px rgba(34, 211, 238, 0.5))' }}>Frontend</text>
-                <text x="230" y="102" textAnchor="start" fill="#e0f2fe" fontSize="13" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.15s', filter: 'drop-shadow(0 0 6px rgba(34, 211, 238, 0.5))' }}>Backend</text>
-                <text x="196" y="236" textAnchor="middle" fill="#e0f2fe" fontSize="13" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.3s', filter: 'drop-shadow(0 0 6px rgba(34, 211, 238, 0.5))' }}>Database</text>
-                <text x="44" y="236" textAnchor="middle" fill="#e0f2fe" fontSize="13" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.45s', filter: 'drop-shadow(0 0 6px rgba(34, 211, 238, 0.5))' }}>Tools</text>
-                <text x="10" y="102" textAnchor="end" fill="#e0f2fe" fontSize="13" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.6s', filter: 'drop-shadow(0 0 6px rgba(34, 211, 238, 0.5))' }}>Solving</text>
-
-                <line x1="120" y1="120" x2="120" y2="28" stroke="url(#hudStrokeGradientMobile)" strokeWidth="2.5" opacity="0.7" className="hud-sweep-line" style={{ transformOrigin: '120px 120px', filter: 'drop-shadow(0 0 12px rgba(34, 211, 238, 0.9))' }} />
-
-                <circle cx="120" cy="120" r="8" fill="black" stroke="#22d3ee" strokeWidth="3" className="hud-center-core" style={{ filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1)) url(#intenseGlowMobile)' }} />
-                <circle cx="120" cy="120" r="3.5" fill="#22d3ee" opacity="1" className="hud-center-inner" />
-              </svg>
-            </div>
-
-            <div className="mt-6 relative z-10">
-              <div className="h-[1px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent mb-4 hud-stats-divider"></div>
-              <div className="grid grid-cols-5 gap-2">
-                {
-                  [{ label: 'FE', value: '90%', delay: '0s' }, { label: 'BE', value: '85%', delay: '0.1s' }, { label: 'DB', value: '80%', delay: '0.2s' }, { label: 'TL', value: '88%', delay: '0.3s' }, { label: 'PS', value: '92%', delay: '0.4s' }].map((stat, i) => (
-                    <div key={i} className="text-center group/hud-stat">
-                      <div className="text-sm font-mono font-black text-cyan-300 group-hover/hud-stat:text-cyan-200 transition-colors duration-300 hud-stat-value" style={{ animationDelay: stat.delay, textShadow: '0 0 10px rgba(34, 211, 238, 0.6)' }}>
-                        {stat.value}
-                      </div>
-                      <div className="text-[9px] font-mono font-bold text-blue-400/70 mt-1 tracking-wider hud-stat-label">{stat.label}</div>
-                    </div>
-                  ))
-                }
-              </div>
-            </div>
-          </div>
-        </div>
+        
 
         {/* DESKTOP GRID LAYOUT */}
         <div className="hidden lg:grid lg:grid-cols-2 gap-12 items-start">
@@ -879,7 +719,7 @@ export default function Home() {
             <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6">
               <h3 className="text-base font-bold mb-4 text-blue-400">Other Skills</h3>
               <div className="flex flex-wrap gap-2">
-                {['REST APIs', 'JWT', 'Firebase', 'DSA', 'OOP', 'UI/UX', 'Responsive Design', 'Agile', 'Figma'].map((skill, i) => (
+                {['REST APIs', 'JWT', 'Firebase', 'DSA', 'OOP', 'UI/UX', 'Responsive Design', 'Leadership', 'Problem Solver'].map((skill, i) => (
                   <span
                     key={i}
                     className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-gray-300 font-mono hover:border-cyan-500/50 hover:text-cyan-400 transition-all duration-300 cursor-default"
@@ -1026,10 +866,8 @@ export default function Home() {
                   }
 
                   <text x="120" y="17" textAnchor="middle" fill="#e0f2fe" fontSize="13" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0s', filter: 'drop-shadow(0 0 6px rgba(34, 211, 238, 0.5))' }}>Frontend</text>
-                  <text x="230" y="102" textAnchor="start" fill="#e0f2fe" fontSize="13" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.15s', filter: 'drop-shadow(0 0 6px rgba(34, 211, 238, 0.5))' }}>Backend</text>
                   <text x="196" y="236" textAnchor="middle" fill="#e0f2fe" fontSize="13" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.3s', filter: 'drop-shadow(0 0 6px rgba(34, 211, 238, 0.5))' }}>Database</text>
-                  <text x="44" y="236" textAnchor="middle" fill="#e0f2fe" fontSize="13" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.45s', filter: 'drop-shadow(0 0 6px rgba(34, 211, 238, 0.5))' }}>Tools</text>
-                  <text x="10" y="102" textAnchor="end" fill="#e0f2fe" fontSize="13" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.6s', filter: 'drop-shadow(0 0 6px rgba(34, 211, 238, 0.5))' }}>Solving</text>
+                  <text x="44" y="236" textAnchor="middle" fill="#e0f2fe" fontSize="13" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.45s', filter: 'drop-shadow(0 0 6px rgba(34, 211, 238, 0.5))' }}>Backend</text>
 
                   <line x1="120" y1="120" x2="120" y2="28" stroke="url(#hudStrokeGradient)" strokeWidth="2.5" opacity="0.7" className="hud-sweep-line" style={{ transformOrigin: '120px 120px', filter: 'drop-shadow(0 0 12px rgba(34, 211, 238, 0.9))' }} />
 
@@ -1133,7 +971,7 @@ export default function Home() {
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6">
             <h3 className="text-base font-bold mb-4 text-blue-400">Other Skills</h3>
             <div className="flex flex-wrap gap-2">
-              {['REST APIs', 'JWT', 'Firebase', 'DSA', 'OOP', 'UI/UX', 'Responsive Design', 'Agile', 'Figma'].map((skill, i) => (
+              {['REST APIs', 'JWT', 'Firebase', 'DSA', 'OOP', 'UI/UX', 'Responsive Design', 'Leadership', 'Problem Solver'].map((skill, i) => (
                 <span
                   key={i}
                   className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-xs text-gray-300 font-mono hover:border-cyan-500/50 hover:text-cyan-400 transition-all duration-300 cursor-default"
