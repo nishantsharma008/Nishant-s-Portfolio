@@ -26,7 +26,6 @@ export default function IcisftResearchPage() {
           
           <div className="flex items-center gap-2 sm:gap-4">
             
-            {/* NS Logo */}
             <span 
               className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 text-transparent bg-clip-text select-none cursor-pointer hover:scale-105 transition-transform duration-300"
               onClick={() => router.push("/")}
@@ -34,10 +33,8 @@ export default function IcisftResearchPage() {
               NS
             </span>
             
-            {/* Divider */}
             <div className="h-5 w-px bg-white/20 hidden sm:block"></div>
             
-            {/* Back Button */}
             <button 
               onClick={() => router.push("/#certificates")}
               className="group/btn flex items-center gap-1.5 sm:gap-2 text-cyan-400 hover:text-cyan-300 transition-all duration-200 text-xs sm:text-sm font-medium hover:-translate-x-1"
@@ -51,11 +48,10 @@ export default function IcisftResearchPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               <span className="hidden sm:inline">Back to Certificates</span>
-              <span className="sm:hidden">Back to Certification </span>
+              <span className="sm:hidden">Back to Certificates </span>
             </button>
           </div>
           
-          {/* Research Publication Button */}
           <button 
             className="
               group relative px-4 py-2 sm:px-6 sm:py-2.5
@@ -143,14 +139,14 @@ export default function IcisftResearchPage() {
                   src="/Screenshot 2026-05-10 220545.png" 
                   alt="ICISFT Rayat Bahra Research Paper 2026"
                   fill
-                  className="object-contain p-2 sm:p-3 md:p-4"
+                  className="object-cover p-1 sm:p-2"
                   priority
                   quality={95}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 45vw"
                 />
                 
                 {/* Hover/Tap Overlay */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 active:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 active:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
                   <div className="flex flex-col items-center gap-1 sm:gap-2 text-white px-4">
                     <FaExpand className="text-2xl sm:text-3xl animate-bounce" />
                     <span className="text-xs sm:text-sm font-semibold text-center">Tap to View Full Size</span>
@@ -205,7 +201,6 @@ export default function IcisftResearchPage() {
             {/* Action Buttons */}
             <div className="flex flex-col gap-3 w-full">
               
-              {/* Read Full Paper Button */}
               <a
                 href="https://scholar.google.com/"
                 target="_blank"
@@ -228,7 +223,6 @@ export default function IcisftResearchPage() {
                 <span className="relative z-10">Read Full Paper</span>
               </a>
 
-              {/* Contact Me Button */}
               <Link 
                 href="/#contact"
                 className="
@@ -257,13 +251,13 @@ export default function IcisftResearchPage() {
 
       </section>
 
-      {/* ✅ FULL SCREEN IMAGE MODAL / LIGHTBOX - FULLY RESPONSIVE! */}
+      {/* ✅ FULL SCREEN IMAGE MODAL - FIXED TO LOOK LIKE INFOSYS! */}
       {isImageModalOpen && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 md:p-6 bg-black/95 backdrop-blur-xl"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-xl"
           onClick={() => setIsImageModalOpen(false)}
         >
-          {/* Close Button - Responsive Positioning & Size */}
+          {/* Close Button */}
           <button 
             className="absolute top-3 right-3 sm:top-4 sm:right-4 z-[110] p-2.5 sm:p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300 hover:rotate-90 hover:scale-110 shadow-lg"
             onClick={(e) => {
@@ -279,25 +273,24 @@ export default function IcisftResearchPage() {
             💡 Click anywhere to close • Scroll to zoom
           </div>
 
-          {/* IMAGE CONTAINER - FULLY RESPONSIVE! */}
+          {/* ✅ IMAGE CONTAINER - FILLS SCREEN BEAUTIFULLY LIKE INFOSYS! */}
           <div 
-            className="relative w-full h-full max-w-[95vw] max-h-[90vh] sm:max-w-[90vw] md:max-w-[85vw] flex items-center justify-center"
+            className="relative w-[92vw] h-[75vh] sm:w-[85vw] sm:h-[80vh] md:w-[70vw] md:h-[78vh] flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Glow Effect */}
-            <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-teal-500/30 rounded-2xl sm:rounded-3xl blur-xl sm:blur-2xl opacity-75"></div>
+            <div className="absolute -inset-3 bg-gradient-to-r from-cyan-500/25 via-blue-500/25 to-teal-500/25 rounded-3xl blur-2xl opacity-60"></div>
             
-            {/* Image Wrapper - Responsive Sizing */}
-            <div className="relative bg-white rounded-lg sm:rounded-2xl shadow-2xl overflow-hidden w-auto h-auto max-w-full max-h-[85vh] sm:max-h-[88vh]">
+            {/* ✅ Image Wrapper - FILLS CONTAINER PERFECTLY! */}
+            <div className="relative w-full h-full bg-white rounded-2xl shadow-2xl overflow-hidden">
               <Image
                 src="/Screenshot 2026-05-10 220545.png"
                 alt="ICISFT Rayat Bahra Research Paper 2026 (Full Size)"
-                width={1200}
-                height={900}
-                className="object-contain w-full h-full max-h-[85vh] sm:max-h-[88vh]"
+                fill
+                className="object-cover"
                 priority
                 quality={100}
-                sizes="(max-width: 640px) 95vw, (max-width: 768px) 90vw, 85vw"
+                sizes="(max-width: 640px) 92vw, (max-width: 1024px) 85vw, 70vw"
               />
             </div>
           </div>
