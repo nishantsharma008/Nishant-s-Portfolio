@@ -48,7 +48,7 @@ export default function IcisftResearchPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               <span className="hidden sm:inline">Back to Certificates</span>
-              <span className="sm:hidden">Back to Certificates </span>
+              <span className="sm:hidden">Back</span>
             </button>
           </div>
           
@@ -124,32 +124,31 @@ export default function IcisftResearchPage() {
         {/* Main Grid */}
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           
-          {/* RESEARCH PAPER IMAGE CARD */}
+          {/* ✅ CERTIFICATE IMAGE CARD - INFOSYS STYLE! */}
           <div className="relative group order-2 lg:order-1 lg:col-span-1">
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-teal-500/20 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity" />
             
             <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-5 md:p-6 shadow-2xl">
               
-              {/* CLICKABLE Image Container */}
+              {/* ✅ CLICKABLE Image Container - INFOSYS STYLE! */}
               <div 
-                className="relative w-full aspect-[1.26/1] rounded-2xl overflow-hidden border-2 border-white/10 group-hover:border-cyan-500/50 transition-all cursor-pointer hover:scale-[1.02] active:scale-[0.98] bg-white"
+                className="relative w-full aspect-[1.26/1] rounded-2xl overflow-hidden border-2 border-white/10 group-hover:border-cyan-500/50 transition-all cursor-pointer hover:scale-[1.02] bg-white"
                 onClick={() => setIsImageModalOpen(true)}
               >
                 <Image
                   src="/Screenshot 2026-05-10 220545.png" 
                   alt="ICISFT Rayat Bahra Research Paper 2026"
                   fill
-                  className="object-cover p-1 sm:p-2"
+                  className="object-contain p-2 sm:p-3 md:p-4"
                   priority
                   quality={95}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 45vw"
                 />
                 
-                {/* Hover/Tap Overlay */}
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 active:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                  <div className="flex flex-col items-center gap-1 sm:gap-2 text-white px-4">
-                    <FaExpand className="text-2xl sm:text-3xl animate-bounce" />
-                    <span className="text-xs sm:text-sm font-semibold text-center">Tap to View Full Size</span>
+                {/* Hover Overlay - INFOSYS STYLE! */}
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                  <div className="flex flex-col items-center gap-2 text-white">
+                    <FaExpand className="text-3xl animate-bounce" />
+                    <span className="text-sm font-semibold">Click to View Full Size</span>
                   </div>
                 </div>
               </div>
@@ -158,7 +157,7 @@ export default function IcisftResearchPage() {
                 className="text-center text-xs text-gray-500 mt-4 italic cursor-pointer hover:text-cyan-400 transition-colors"
                 onClick={() => setIsImageModalOpen(true)}
               >
-                👆 Click image above to view full size
+                👆 Click image to view full size
               </p>
             </div>
           </div>
@@ -251,46 +250,46 @@ export default function IcisftResearchPage() {
 
       </section>
 
-      {/* ✅ FULL SCREEN IMAGE MODAL - FIXED TO LOOK LIKE INFOSYS! */}
+      {/* ✅ FULL SCREEN IMAGE MODAL - EXACTLY LIKE INFOSYS STYLE! */}
       {isImageModalOpen && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-xl"
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl animate-[fadeIn_0.3s_ease-out_forwards]"
           onClick={() => setIsImageModalOpen(false)}
         >
-          {/* Close Button */}
+          {/* Close Button - INFOSYS STYLE */}
           <button 
-            className="absolute top-3 right-3 sm:top-4 sm:right-4 z-[110] p-2.5 sm:p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300 hover:rotate-90 hover:scale-110 shadow-lg"
+            className="absolute top-4 right-4 z-[110] p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300 hover:rotate-90 hover:scale-110"
             onClick={(e) => {
               e.stopPropagation();
               setIsImageModalOpen(false);
             }}
           >
-            <FaTimes className="text-xl sm:text-2xl" />
+            <FaTimes className="text-2xl" />
           </button>
 
-          {/* Download Hint */}
+          {/* Download Hint - INFOSYS STYLE */}
           <div className="absolute top-4 left-4 z-[110] px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm">
             💡 Click anywhere to close • Scroll to zoom
           </div>
 
-          {/* ✅ IMAGE CONTAINER - FILLS SCREEN BEAUTIFULLY LIKE INFOSYS! */}
+          {/* Image Container - INFOSYS STYLE! */}
           <div 
-            className="relative w-[92vw] h-[75vh] sm:w-[85vw] sm:h-[80vh] md:w-[70vw] md:h-[78vh] flex items-center justify-center"
+            className="relative max-w-6xl max-h-[90vh] w-full animate-[scaleIn_0.3s_ease-out_forwards]"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Glow Effect */}
-            <div className="absolute -inset-3 bg-gradient-to-r from-cyan-500/25 via-blue-500/25 to-teal-500/25 rounded-3xl blur-2xl opacity-60"></div>
+            {/* Glow Effect - INFOSYS STYLE */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-teal-500/30 rounded-3xl blur-2xl opacity-75"></div>
             
-            {/* ✅ Image Wrapper - FILLS CONTAINER PERFECTLY! */}
-            <div className="relative w-full h-full bg-white rounded-2xl shadow-2xl overflow-hidden">
+            {/* Image Wrapper - INFOSYS STYLE! */}
+            <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[90vh]">
               <Image
                 src="/Screenshot 2026-05-10 220545.png"
                 alt="ICISFT Rayat Bahra Research Paper 2026 (Full Size)"
-                fill
-                className="object-cover"
+                width={1200}
+                height={900}
+                className="object-contain w-full h-auto max-h-[85vh]"
                 priority
                 quality={100}
-                sizes="(max-width: 640px) 92vw, (max-width: 1024px) 85vw, 70vw"
               />
             </div>
           </div>
