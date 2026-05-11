@@ -788,9 +788,9 @@ export default function Home() {
 
                 <text x="208" y="344" textAnchor="middle" fill="#e0f2fe" fontSize="14" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.3s', filter: 'drop-shadow(0 0 12px rgba(34, 211, 238, 0.9))' }}>Database</text>
 
-                <text x="18" y="344" textAnchor="middle" fill="#e0f2fe" fontSize="14" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.45s', filter: 'drop-shadow(0 0 12px rgba(34, 211, 238, 0.9))' }}>DevOps</text>
+                <text x="18" y="344" textAnchor="middle" fill="#e0f2fe" fontSize="14" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.45s', filter: 'drop-shadow(0 0 12px rgba(34, 211, 238, 0.9))' }}>Tools</text>
 
-                <text x="-36" y="112" textAnchor="end" fill="#e0f2fe" fontSize="15" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.6s', filter: 'drop-shadow(0 0 12px rgba(34, 211, 238, 0.9))' }}>Tools</text>
+                <text x="-36" y="112" textAnchor="end" fill="#e0f2fe" fontSize="15" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.6s', filter: 'drop-shadow(0 0 12px rgba(34, 211, 238, 0.9))' }}>Solving</text>
 
                 {/* Center Line */}
                 <line x1="110" y1="163" x2="110" y2="19" stroke="url(#hudStrokeGradientMobile)" strokeWidth="4" opacity="0.74" className="hud-sweep-line" style={{ transformOrigin: '110px 163px', filter: 'drop-shadow(0 0 18px rgba(34, 211, 238, 1))' }} />
@@ -1068,9 +1068,9 @@ export default function Home() {
 
         <text x="252" y="335" textAnchor="middle" fill="#e0f2fe" fontSize="16" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.3s', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Database</text>
 
-        <text x="26" y="335" textAnchor="middle" fill="#e0f2fe" fontSize="16" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.45s', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>DevOps</text>
+        <text x="26" y="335" textAnchor="middle" fill="#e0f2fe" fontSize="16" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.45s', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Tools</text>
 
-        <text x="-38" y="131" textAnchor="end" fill="#e0f2fe" fontSize="17" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.6s', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Tools</text>
+        <text x="-38" y="131" textAnchor="end" fill="#e0f2fe" fontSize="17" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.6s', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Solving</text>
 
         {/* Center Line */}
         <line x1="140" y1="160" x2="140" y2="19" stroke="url(#hudStrokeGradient)" strokeWidth="3.8" opacity="0.74" className="hud-sweep-line" style={{ transformOrigin: '140px 160px', filter: 'drop-shadow(0 0 19px rgba(34, 211, 238, 1))' }} />
