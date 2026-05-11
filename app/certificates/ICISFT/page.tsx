@@ -51,7 +51,7 @@ export default function IcisftResearchPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               <span className="hidden sm:inline">Back to Certificates</span>
-              <span className="sm:hidden">Back</span>
+              <span className="sm:hidden">Back to Certification </span>
             </button>
           </div>
           
@@ -274,10 +274,9 @@ export default function IcisftResearchPage() {
             <FaTimes className="text-xl sm:text-2xl" />
           </button>
 
-          {/* Hint - Responsive Text */}
-          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-[110] px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-xs sm:text-sm">
-            <span className="hidden xs:inline">💡 Click anywhere to close</span>
-            <span className="xs:hidden">🔝 Tap to close</span>
+          {/* Download Hint */}
+          <div className="absolute top-4 left-4 z-[110] px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm">
+            💡 Click anywhere to close • Scroll to zoom
           </div>
 
           {/* IMAGE CONTAINER - FULLY RESPONSIVE! */}
