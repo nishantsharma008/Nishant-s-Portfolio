@@ -20,14 +20,17 @@ export default function IcisftResearchPage() {
         <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] rounded-full opacity-15 bg-cyan-600/30 blur-3xl" />
       </div>
 
-      {/* ✨ NAVBAR - SAME STYLE AS INFOSYS PAGE! */}
+      {/* NAVBAR */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-[#0B0F1A]/80 backdrop-blur-2xl border-b border-white/10 shadow-lg shadow-black/20">
         <div className="w-full px-3 sm:px-6 lg:px-8 py-3.5 sm:py-4 flex items-center justify-between">
           
           <div className="flex items-center gap-2 sm:gap-4">
             
             {/* NS Logo */}
-            <span className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 text-transparent bg-clip-text select-none cursor-pointer hover:scale-105 transition-transform duration-300">
+            <span 
+              className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 text-transparent bg-clip-text select-none cursor-pointer hover:scale-105 transition-transform duration-300"
+              onClick={() => router.push("/")}
+            >
               NS
             </span>
             
@@ -36,7 +39,7 @@ export default function IcisftResearchPage() {
             
             {/* Back Button */}
             <button 
-              onClick={() => router.push('/#certificates')}
+              onClick={() => router.push("/#certificates")}
               className="group/btn flex items-center gap-1.5 sm:gap-2 text-cyan-400 hover:text-cyan-300 transition-all duration-200 text-xs sm:text-sm font-medium hover:-translate-x-1"
             >
               <svg 
@@ -48,11 +51,11 @@ export default function IcisftResearchPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               <span className="hidden sm:inline">Back to Certificates</span>
-              <span className="sm:hidden">Back to Certificates </span>
+              <span className="sm:hidden">Back</span>
             </button>
           </div>
           
-          {/* Research Publication Button - Same Fancy Style! */}
+          {/* Research Publication Button */}
           <button 
             className="
               group relative px-4 py-2 sm:px-6 sm:py-2.5
@@ -84,7 +87,7 @@ export default function IcisftResearchPage() {
             </svg>
             
             <span className="relative z-10 hidden xs:inline tracking-wide">Research Publication</span>
-            <span className="relative z-10 xs:hidden">Research Details</span>
+            <span className="relative z-10 xs:hidden">Details</span>
             
             <span className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-blue-400/0 group-hover:border-blue-400/80 rounded-tl-lg transition-all duration-300"></span>
             <span className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-blue-400/0 group-hover:border-blue-400/80 rounded-br-lg transition-all delay-100 duration-300"></span>
@@ -113,7 +116,7 @@ export default function IcisftResearchPage() {
             <span className="w-2 h-2 rounded-full bg-green-400"></span>
             Conference: <strong className="text-white">ICISFT</strong>
           </span>
-          <span>|</span>
+          <span className="hidden sm:inline">|</span>
           <span>Date: <strong className="text-white">March 2026</strong></span>
         </div>
 
@@ -125,15 +128,15 @@ export default function IcisftResearchPage() {
         {/* Main Grid */}
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           
-          {/* ✅ RESEARCH PAPER IMAGE CARD - WITH YOUR NEW IMAGE! */}
+          {/* RESEARCH PAPER IMAGE CARD */}
           <div className="relative group order-2 lg:order-1 lg:col-span-1">
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-teal-500/20 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity" />
             
             <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-5 md:p-6 shadow-2xl">
               
-              {/* ✅ CLICKABLE Image Container - YOUR NEW IMAGE HERE! */}
+              {/* CLICKABLE Image Container */}
               <div 
-                className="relative w-full aspect-[1.26/1] rounded-2xl overflow-hidden border-2 border-white/10 group-hover:border-cyan-500/50 transition-all cursor-pointer hover:scale-[1.02] bg-white"
+                className="relative w-full aspect-[1.26/1] rounded-2xl overflow-hidden border-2 border-white/10 group-hover:border-cyan-500/50 transition-all cursor-pointer hover:scale-[1.02] active:scale-[0.98] bg-white"
                 onClick={() => setIsImageModalOpen(true)}
               >
                 <Image
@@ -143,19 +146,23 @@ export default function IcisftResearchPage() {
                   className="object-contain p-2 sm:p-3 md:p-4"
                   priority
                   quality={95}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 45vw"
                 />
                 
-                {/* Hover Overlay - Shows "Click to Expand" */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                  <div className="flex flex-col items-center gap-2 text-white">
-                    <FaExpand className="text-3xl animate-bounce" />
-                    <span className="text-sm font-semibold">Click to View Full Size</span>
+                {/* Hover/Tap Overlay */}
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 active:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                  <div className="flex flex-col items-center gap-1 sm:gap-2 text-white px-4">
+                    <FaExpand className="text-2xl sm:text-3xl animate-bounce" />
+                    <span className="text-xs sm:text-sm font-semibold text-center">Tap to View Full Size</span>
                   </div>
                 </div>
               </div>
               
-              <p className="text-center text-xs text-gray-500 mt-4 italic cursor-pointer hover:text-cyan-400 transition-colors" onClick={() => setIsImageModalOpen(true)}>
-                👆 Click image to view full size
+              <p 
+                className="text-center text-xs text-gray-500 mt-4 italic cursor-pointer hover:text-cyan-400 transition-colors"
+                onClick={() => setIsImageModalOpen(true)}
+              >
+                👆 Click image above to view full size
               </p>
             </div>
           </div>
@@ -195,7 +202,7 @@ export default function IcisftResearchPage() {
               </div>
             </div>
 
-            {/* Action Buttons - PERFECTLY ALIGNED! */}
+            {/* Action Buttons */}
             <div className="flex flex-col gap-3 w-full">
               
               {/* Read Full Paper Button */}
@@ -221,7 +228,7 @@ export default function IcisftResearchPage() {
                 <span className="relative z-10">Read Full Paper</span>
               </a>
 
-              {/* Questions? Contact Me Button */}
+              {/* Contact Me Button */}
               <Link 
                 href="/#contact"
                 className="
@@ -250,52 +257,55 @@ export default function IcisftResearchPage() {
 
       </section>
 
-      {/* ✅ FULL SCREEN IMAGE MODAL / LIGHTBOX - WITH YOUR NEW IMAGE! */}
+      {/* ✅ FULL SCREEN IMAGE MODAL / LIGHTBOX - FULLY RESPONSIVE! */}
       {isImageModalOpen && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl animate-[fadeIn_0.3s_ease-out_forwards]"
+          className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 md:p-6 bg-black/95 backdrop-blur-xl"
           onClick={() => setIsImageModalOpen(false)}
         >
-          {/* Close Button */}
+          {/* Close Button - Responsive Positioning & Size */}
           <button 
-            className="absolute top-4 right-4 z-[110] p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300 hover:rotate-90 hover:scale-110"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 z-[110] p-2.5 sm:p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300 hover:rotate-90 hover:scale-110 shadow-lg"
             onClick={(e) => {
               e.stopPropagation();
               setIsImageModalOpen(false);
             }}
           >
-            <FaTimes className="text-2xl" />
+            <FaTimes className="text-xl sm:text-2xl" />
           </button>
 
-          {/* Hint */}
-          <div className="absolute top-4 left-4 z-[110] px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm">
-            💡 Click anywhere to close • Scroll to zoom
+          {/* Hint - Responsive Text */}
+          <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-[110] px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-xs sm:text-sm">
+            <span className="hidden xs:inline">💡 Click anywhere to close</span>
+            <span className="xs:hidden">🔝 Tap to close</span>
           </div>
 
-          {/* Image Container - YOUR NEW IMAGE IN MODAL TOO! */}
+          {/* IMAGE CONTAINER - FULLY RESPONSIVE! */}
           <div 
-            className="relative max-w-6xl max-h-[90vh] w-full animate-[scaleIn_0.3s_ease-out_forwards]"
+            className="relative w-full h-full max-w-[95vw] max-h-[90vh] sm:max-w-[90vw] md:max-w-[85vw] flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Glow Effect */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-teal-500/30 rounded-3xl blur-2xl opacity-75"></div>
+            <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-teal-500/30 rounded-2xl sm:rounded-3xl blur-xl sm:blur-2xl opacity-75"></div>
             
-            <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[90vh]">
+            {/* Image Wrapper - Responsive Sizing */}
+            <div className="relative bg-white rounded-lg sm:rounded-2xl shadow-2xl overflow-hidden w-auto h-auto max-w-full max-h-[85vh] sm:max-h-[88vh]">
               <Image
-                src="/Screenshot 2026-05-10 220024.png"
+                src="/Screenshot 2026-05-10 220545.png"
                 alt="ICISFT Rayat Bahra Research Paper 2026 (Full Size)"
                 width={1200}
                 height={900}
-                className="object-contain w-full h-auto max-h-[85vh]"
+                className="object-contain w-full h-full max-h-[85vh] sm:max-h-[88vh]"
                 priority
                 quality={100}
+                sizes="(max-width: 640px) 95vw, (max-width: 768px) 90vw, 85vw"
               />
             </div>
           </div>
         </div>
       )}
 
-      {/* FOOTER - NO BIG DIVIDER LINE! */}
+      {/* FOOTER */}
       <footer className="relative z-16 border-t border-white/10 pt-8 pb-12">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex justify-center">

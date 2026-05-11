@@ -158,7 +158,7 @@ export default function CVPage() {
             >
               <FaArrowLeft className="group-hover/btn:-translate-x-1 transition-transform duration-200" />
               <span className="hidden sm:inline">Back to Home</span>
-              <span className="sm:hidden">Back</span>
+              <span className="sm:hidden">Back to Home </span>
             </button>
           </div>
           
