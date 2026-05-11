@@ -48,7 +48,7 @@ export default function IcisftResearchPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               <span className="hidden sm:inline">Back to Certificates</span>
-              <span className="sm:hidden">Back</span>
+              <span className="sm:hidden">Back to Certificatesn</span>
             </button>
           </div>
           
