@@ -809,7 +809,7 @@ export default function Home() {
                   { label: 'FE', value: '90%', delay: '0s' },
                   { label: 'BE', value: '85%', delay: '0.1s' },
                   { label: 'DB', value: '80%', delay: '0.2s' },
-                  { label: 'SL', value: '88%', delay: '0.3s' },
+                  { label: 'SV', value: '88%', delay: '0.3s' },
                   { label: 'TL', value: '92%', delay: '0.4s' }
                 ].map((stat, i) => (
                   <div key={i} className="text-center group/hud-stat">
@@ -1089,7 +1089,7 @@ export default function Home() {
           { label: 'FE', value: '90%', delay: '0s' },
           { label: 'BE', value: '85%', delay: '0.1s' },
           { label: 'DB', value: '80%', delay: '0.2s' },
-          { label: 'SL', value: '88%', delay: '0.3s' },
+          { label: 'SV', value: '88%', delay: '0.3s' },
           { label: 'TL', value: '92%', delay: '0.4s' }
         ].map((stat, i) => (
           <div key={i} className="text-center group/hud-stat">
