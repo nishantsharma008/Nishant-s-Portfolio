@@ -312,7 +312,7 @@ export default function Home() {
         </div>
 
         {/* HERO IMAGE */}
-        <div className="flex justify-center md:justify-end relative h-[330px] sm:h-[420px] md:h-auto pb-6 md:pb-0 fade-in-up-element" style={{ animationDelay: '300ms' }}>
+        <div className="flex justify-center md:justify-end relative h-[290px] sm:h-[400px] md:h-auto pb-5 sm:pb-6 md:pb-0 fade-in-up-element">
           <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 flex items-center justify-center">
             <div className="absolute w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] md:w-[380px] md:h-[380px] rounded-full bg-cyan-600/40 blur-3xl"></div>
             <div className="absolute w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] md:w-[320px] md:h-[320px] rounded-full border border-cyan-500/30 animate-spin-slow"></div>
@@ -334,7 +334,7 @@ export default function Home() {
       </section>
 
       {/* STATS SECTION */}
-      <section id="stats" className="relative max-w-6xl mx-auto px-6 pb-20 mt-4 md:-mt-20 z-10 scroll-animate">
+      <section id="stats" className="relative max-w-6xl mx-auto px-6 pb-20 -mt-2 sm:mt-3 md:-mt-20 z-10 scroll-animate">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           <div className="bg-white/10 backdrop-blur-xl p-5 md:p-6 rounded-2xl border border-white/10 text-center hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:bg-white/20 shadow-xl fade-in-up-element" style={{ animationDelay: '700ms' }}>
             <HiOutlineRocketLaunch className="text-cyan-400 text-3xl md:text-4xl mx-auto mb-2 md:mb-3" />
