@@ -917,193 +917,193 @@ export default function Home() {
           </div>
 
           {/* RIGHT COLUMN - DESKTOP RADAR - MOVED RIGHT (CORRECT) */}
-<div className="lg:sticky lg:top-24 flex justify-end items-start -mt-28 translate-x-6 sm:translate-x-10 lg:translate-x-16 xl:translate-x-24 2xl:translate-x-32">
+          <div className="lg:sticky lg:top-24 flex justify-end items-start -mt-28 translate-x-6 sm:translate-x-10 lg:translate-x-16 xl:translate-x-24 2xl:translate-x-32">
 
-  <div className="relative bg-gradient-to-br from-black via-slate-950 to-blue-950 border-2 border-cyan-500/40 rounded-3xl px-5 py-5 md:px-6 md:py-6 overflow-visible w-full max-w-[520px] shadow-2xl shadow-cyan-500/20 group hover:border-cyan-400/60 hover:shadow-cyan-400/30 transition-all duration-700">
+            <div className="relative bg-gradient-to-br from-black via-slate-950 to-blue-950 border-2 border-cyan-500/40 rounded-3xl px-5 py-5 md:px-6 md:py-6 overflow-visible w-full max-w-[520px] shadow-2xl shadow-cyan-500/20 group hover:border-cyan-400/60 hover:shadow-cyan-400/30 transition-all duration-700">
 
-    {/* Corner Brackets */}
-    <div className="absolute top-3 left-3 w-10 h-10 border-t-2 border-l-2 border-cyan-400/70 rounded-tl-lg corner-bracket-hud"></div>
-    <div className="absolute top-3 right-3 w-10 h-10 border-t-2 border-r-2 border-cyan-400/70 rounded-tr-lg corner-bracket-hud-delayed"></div>
-    <div className="absolute bottom-3 left-3 w-10 h-10 border-b-2 border-l-2 border-cyan-400/70 rounded-bl-lg corner-bracket-hud"></div>
-    <div className="absolute bottom-3 right-3 w-10 h-10 border-b-2 border-r-2 border-cyan-400/70 rounded-br-lg corner-bracket-hud-delayed"></div>
+              {/* Corner Brackets */}
+              <div className="absolute top-3 left-3 w-10 h-10 border-t-2 border-l-2 border-cyan-400/70 rounded-tl-lg corner-bracket-hud"></div>
+              <div className="absolute top-3 right-3 w-10 h-10 border-t-2 border-r-2 border-cyan-400/70 rounded-tr-lg corner-bracket-hud-delayed"></div>
+              <div className="absolute bottom-3 left-3 w-10 h-10 border-b-2 border-l-2 border-cyan-400/70 rounded-bl-lg corner-bracket-hud"></div>
+              <div className="absolute bottom-3 right-3 w-10 h-10 border-b-2 border-r-2 border-cyan-400/70 rounded-br-lg corner-bracket-hud-delayed"></div>
 
-    {/* Background Effects */}
-    <div className="absolute inset-0 pointer-events-none opacity-5 scanlines-overlay"></div>
-    <div className="absolute inset-0 opacity-[0.03] hud-grid-pattern"></div>
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-32 bg-gradient-to-b from-cyan-500/20 via-cyan-500/5 to-transparent blur-2xl hud-glow-top"></div>
-    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-24 bg-gradient-to-t from-blue-600/15 via-blue-600/5 to-transparent blur-2xl hud-glow-bottom"></div>
+              {/* Background Effects */}
+              <div className="absolute inset-0 pointer-events-none opacity-5 scanlines-overlay"></div>
+              <div className="absolute inset-0 opacity-[0.03] hud-grid-pattern"></div>
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-32 bg-gradient-to-b from-cyan-500/20 via-cyan-500/5 to-transparent blur-2xl hud-glow-top"></div>
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-24 bg-gradient-to-t from-blue-600/15 via-blue-600/5 to-transparent blur-2xl hud-glow-bottom"></div>
 
-    {/* Particles */}
-    <div className="absolute top-12 left-10 w-1.5 h-1.5 bg-cyan-400 rounded-full particle-float-1 shadow-lg shadow-cyan-400/80"></div>
-    <div className="absolute top-20 right-14 w-1 h-1 bg-blue-400 rounded-full particle-float-2 shadow-lg shadow-blue-400/80"></div>
-    <div className="absolute bottom-20 left-16 w-1.5 h-1.5 bg-cyan-300 rounded-full particle-float-3 shadow-lg shadow-cyan-300/80"></div>
-    <div className="absolute bottom-16 right-12 w-1 h-1 bg-blue-300 rounded-full particle-float-4 shadow-lg shadow-blue-400/80"></div>
+              {/* Particles */}
+              <div className="absolute top-12 left-10 w-1.5 h-1.5 bg-cyan-400 rounded-full particle-float-1 shadow-lg shadow-cyan-400/80"></div>
+              <div className="absolute top-20 right-14 w-1 h-1 bg-blue-400 rounded-full particle-float-2 shadow-lg shadow-blue-400/80"></div>
+              <div className="absolute bottom-20 left-16 w-1.5 h-1.5 bg-cyan-300 rounded-full particle-float-3 shadow-lg shadow-cyan-300/80"></div>
+              <div className="absolute bottom-16 right-12 w-1 h-1 bg-blue-300 rounded-full particle-float-4 shadow-lg shadow-blue-400/80"></div>
 
-    {/* Title */}
-    <div className="relative z-10 mb-2">
-      <div className="flex items-center justify-center gap-3">
-        <div className="w-2.5 h-2.5 bg-cyan-400 rounded-full animate-pulse shadow-lg shadow-cyan-400/90 hud-status-dot"></div>
-        <h3 className="text-xl font-bold text-cyan-300 tracking-wider uppercase drop-shadow-[0_0_10px_rgba(6,182,212,0.6)] hud-title-glow">
-          Skills Overview
-        </h3>
-        <div className="w-2.5 h-2.5 bg-blue-400 rounded-full animate-pulse shadow-lg shadow-blue-400/90 hud-status-dot-delayed"></div>
-      </div>
-      <div className="mt-2 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent hud-subtitle-line"></div>
-    </div>
+              {/* Title */}
+              <div className="relative z-10 mb-2">
+                <div className="flex items-center justify-center gap-3">
+                  <div className="w-2.5 h-2.5 bg-cyan-400 rounded-full animate-pulse shadow-lg shadow-cyan-400/90 hud-status-dot"></div>
+                  <h3 className="text-xl font-bold text-cyan-300 tracking-wider uppercase drop-shadow-[0_0_10px_rgba(6,182,212,0.6)] hud-title-glow">
+                    Skills Overview
+                  </h3>
+                  <div className="w-2.5 h-2.5 bg-blue-400 rounded-full animate-pulse shadow-lg shadow-blue-400/90 hud-status-dot-delayed"></div>
+                </div>
+                <div className="mt-2 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent hud-subtitle-line"></div>
+              </div>
 
-    {/* SVG Container */}
-    <div className="relative w-full pt-0 pb-8 px-3 max-w-[508px] mx-auto relative z-10 overflow-visible">
-      <svg viewBox="-108 -61 475 403"
-        className="w-full h-full relative z-10 hover:scale-[1.01] transition-transform duration-500"
-        style={{ overflow: 'visible' }}
-        preserveAspectRatio="xMidYMid meet">
+              {/* SVG Container */}
+              <div className="relative w-full pt-0 pb-8 px-3 max-w-[508px] mx-auto relative z-10 overflow-visible">
+                <svg viewBox="-108 -61 475 403"
+                  className="w-full h-full relative z-10 hover:scale-[1.01] transition-transform duration-500"
+                  style={{ overflow: 'visible' }}
+                  preserveAspectRatio="xMidYMid meet">
 
-        <defs>
-          <linearGradient id="hudFillGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.75">
-              <animate attributeName="stop-color" values="#06b6d4;#0ea5e9;#06b6d4" dur="3s" repeatCount="indefinite" />
-            </stop>
-            <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.55">
-              <animate attributeName="stop-color" values="#3b82f6;#2563eb;#3b82f6" dur="3s" repeatCount="indefinite" />
-            </stop>
-            <stop offset="100%" stopColor="#1e40af" stopOpacity="0.45" />
-          </linearGradient>
+                  <defs>
+                    <linearGradient id="hudFillGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.75">
+                        <animate attributeName="stop-color" values="#06b6d4;#0ea5e9;#06b6d4" dur="3s" repeatCount="indefinite" />
+                      </stop>
+                      <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.55">
+                        <animate attributeName="stop-color" values="#3b82f6;#2563eb;#3b82f6" dur="3s" repeatCount="indefinite" />
+                      </stop>
+                      <stop offset="100%" stopColor="#1e40af" stopOpacity="0.45" />
+                    </linearGradient>
 
-          <linearGradient id="hudStrokeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#22d3ee" stopOpacity="1" />
-            <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="#3b82f6" stopOpacity="1" />
-          </linearGradient>
+                    <linearGradient id="hudStrokeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#22d3ee" stopOpacity="1" />
+                      <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.9" />
+                      <stop offset="100%" stopColor="#3b82f6" stopOpacity="1" />
+                    </linearGradient>
 
-          <filter id="hudGlow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="6.5" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
+                    <filter id="hudGlow" x="-50%" y="-50%" width="200%" height="200%">
+                      <feGaussianBlur stdDeviation="6.5" result="blur" />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
 
-          <filter id="intenseGlow" x="-100%" y="-100%" width="300%" height="300%">
-            <feGaussianBlur stdDeviation="8.5" result="blur" />
-            <feComponentTransfer in="blur" result="boost">
-              <feFuncA type="linear" slope="1.65" />
-            </feComponentTransfer>
-            <feMerge>
-              <feMergeNode in="boost" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
+                    <filter id="intenseGlow" x="-100%" y="-100%" width="300%" height="300%">
+                      <feGaussianBlur stdDeviation="8.5" result="blur" />
+                      <feComponentTransfer in="blur" result="boost">
+                        <feFuncA type="linear" slope="1.65" />
+                      </feComponentTransfer>
+                      <feMerge>
+                        <feMergeNode in="boost" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
 
-        {/* Grid Polygons */}
-        {[0.18, 0.36, 0.54, 0.72, 0.9, 1].map((scale, i) => (
-          <polygon
-            key={`grid-${i}`}
-            points="140,19 290,125 243,301 37,301 -10,125"
-            fill="none"
-            stroke={`rgba(6, 182, 212, ${0.06 + i * 0.04})`}
-            strokeWidth={i === 5 ? "3.8" : i >= 3 ? "1.9" : "1.1"}
-            transform={`scale(${scale}) translate(${(1 - scale) * 140}px, ${(1 - scale) * 160}px)`}
-            className={i >= 4 ? 'hud-grid-pulse' : ''}
-            style={{ filter: i === 5 ? 'drop-shadow(0 0 7px rgba(6, 182, 212, 0.68))' : 'none' }}
-          />
-        ))}
+                  {/* Grid Polygons */}
+                  {[0.18, 0.36, 0.54, 0.72, 0.9, 1].map((scale, i) => (
+                    <polygon
+                      key={`grid-${i}`}
+                      points="140,19 290,125 243,301 37,301 -10,125"
+                      fill="none"
+                      stroke={`rgba(6, 182, 212, ${0.06 + i * 0.04})`}
+                      strokeWidth={i === 5 ? "3.8" : i >= 3 ? "1.9" : "1.1"}
+                      transform={`scale(${scale}) translate(${(1 - scale) * 140}px, ${(1 - scale) * 160}px)`}
+                      className={i >= 4 ? 'hud-grid-pulse' : ''}
+                      style={{ filter: i === 5 ? 'drop-shadow(0 0 7px rgba(6, 182, 212, 0.68))' : 'none' }}
+                    />
+                  ))}
 
-        {/* Axis Lines */}
-        {[[140, 19], [290, 125], [243, 301], [37, 301], [-10, 125]].map(([x, y], i) => (
-          <line
-            key={`axis-${i}`}
-            x1="140"
-            y1="160"
-            x2={x}
-            y2={y}
-            stroke="rgba(34, 211, 238, 0.29)"
-            strokeWidth="1.7"
-            className="hud-axis-glow"
-            style={{ animationDelay: `${i * 0.25}s` }}
-          />
-        ))}
+                  {/* Axis Lines */}
+                  {[[140, 19], [290, 125], [243, 301], [37, 301], [-10, 125]].map(([x, y], i) => (
+                    <line
+                      key={`axis-${i}`}
+                      x1="140"
+                      y1="160"
+                      x2={x}
+                      y2={y}
+                      stroke="rgba(34, 211, 238, 0.29)"
+                      strokeWidth="1.7"
+                      className="hud-axis-glow"
+                      style={{ animationDelay: `${i * 0.25}s` }}
+                    />
+                  ))}
 
-        {/* Data Polygon */}
-        <polygon
-          points="140,47 264,135 224,269 56,269 16,135"
-          fill="url(#hudFillGradient)"
-          stroke="url(#hudStrokeGradient)"
-          strokeWidth="4.2"
-          strokeLinejoin="round"
-          className="hud-data-polygon"
-          style={{ filter: 'drop-shadow(0 0 30px rgba(6, 182, 212, 0.88)) url(#hudGlow)' }}
-        >
-          <animate
-            attributeName="points"
-            values="140,47 264,135 224,269 56,269 16,135;140,42 268,131 230,278 50,278 12,131;140,47 264,135 224,269 56,269 16,135"
-            dur="4s"
-            repeatCount="indefinite"
-          />
-        </polygon>
+                  {/* Data Polygon */}
+                  <polygon
+                    points="140,47 264,135 224,269 56,269 16,135"
+                    fill="url(#hudFillGradient)"
+                    stroke="url(#hudStrokeGradient)"
+                    strokeWidth="4.2"
+                    strokeLinejoin="round"
+                    className="hud-data-polygon"
+                    style={{ filter: 'drop-shadow(0 0 30px rgba(6, 182, 212, 0.88)) url(#hudGlow)' }}
+                  >
+                    <animate
+                      attributeName="points"
+                      values="140,47 264,135 224,269 56,269 16,135;140,42 268,131 230,278 50,278 12,131;140,47 264,135 224,269 56,269 16,135"
+                      dur="4s"
+                      repeatCount="indefinite"
+                    />
+                  </polygon>
 
-        {/* Data Points */}
-        {
-          [[140, 47], [264, 135], [224, 269], [56, 269], [16, 135]].map(([x, y], idx) => (
-            <g key={`pt-${idx}`} className="cursor-pointer group/hud-point">
-              <circle cx={x} cy={y} r="20" fill="none" stroke="#22d3ee" strokeWidth="2.3" opacity="0.5" className="hud-point-outer-ring" style={{ animationDelay: `${idx * 0.35}s` }}>
-                <animate attributeName="r" values="18;26;18" dur="2.5s" repeatCount="indefinite" begin={`${idx * 0.35}`} />
-                <animate attributeName="opacity" values="0.6;0.15;0.6" dur="2.5s" repeatCount="indefinite" begin={`${idx * 0.35}`} />
-              </circle>
-              <circle cx={x} cy={y} r="12" fill="none" stroke="#3b82f6" strokeWidth="2.9" opacity="0.65" className="hud-point-middle-ring" style={{ animationDelay: `${idx * 0.35 + 0.15}` }}>
-                <animate attributeName="r" values="11;15;11" dur="2s" repeatCount="indefinite" begin={`${idx * 0.35 + 0.15}`} />
-              </circle>
-              <circle cx={x} cy={y} r="8.5" fill="#22d3ee" className="hud-point-core" style={{ filter: 'url(#intenseGlow)', animationDelay: `${idx * 0.2}` }}>
-                <animate attributeName="r" values="7.5;10.5;7.5" dur="1.8s" repeatCount="indefinite" begin={`${idx * 0.2}`} />
-              </circle>
-              <circle cx={x} cy={y} r="3.8" fill="white" opacity="0.95" />
-            </g>
-          ))
-        }
+                  {/* Data Points */}
+                  {
+                    [[140, 47], [264, 135], [224, 269], [56, 269], [16, 135]].map(([x, y], idx) => (
+                      <g key={`pt-${idx}`} className="cursor-pointer group/hud-point">
+                        <circle cx={x} cy={y} r="20" fill="none" stroke="#22d3ee" strokeWidth="2.3" opacity="0.5" className="hud-point-outer-ring" style={{ animationDelay: `${idx * 0.35}s` }}>
+                          <animate attributeName="r" values="18;26;18" dur="2.5s" repeatCount="indefinite" begin={`${idx * 0.35}`} />
+                          <animate attributeName="opacity" values="0.6;0.15;0.6" dur="2.5s" repeatCount="indefinite" begin={`${idx * 0.35}`} />
+                        </circle>
+                        <circle cx={x} cy={y} r="12" fill="none" stroke="#3b82f6" strokeWidth="2.9" opacity="0.65" className="hud-point-middle-ring" style={{ animationDelay: `${idx * 0.35 + 0.15}` }}>
+                          <animate attributeName="r" values="11;15;11" dur="2s" repeatCount="indefinite" begin={`${idx * 0.35 + 0.15}`} />
+                        </circle>
+                        <circle cx={x} cy={y} r="8.5" fill="#22d3ee" className="hud-point-core" style={{ filter: 'url(#intenseGlow)', animationDelay: `${idx * 0.2}` }}>
+                          <animate attributeName="r" values="7.5;10.5;7.5" dur="1.8s" repeatCount="indefinite" begin={`${idx * 0.2}`} />
+                        </circle>
+                        <circle cx={x} cy={y} r="3.8" fill="white" opacity="0.95" />
+                      </g>
+                    ))
+                  }
 
-        {/* Labels */}
-        <text x="140" y="-1" textAnchor="middle" fill="#e0f2fe" fontSize="17" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Frontend</text>
+                  {/* Labels */}
+                  <text x="140" y="-1" textAnchor="middle" fill="#e0f2fe" fontSize="17" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Frontend</text>
 
-        <text x="302" y="131" textAnchor="start" fill="#e0f2fe" fontSize="17" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.15s', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Backend</text>
+                  <text x="302" y="131" textAnchor="start" fill="#e0f2fe" fontSize="17" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.15s', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Backend</text>
 
-        <text x="252" y="335" textAnchor="middle" fill="#e0f2fe" fontSize="16" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.3s', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Database</text>
+                  <text x="252" y="335" textAnchor="middle" fill="#e0f2fe" fontSize="16" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.3s', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Database</text>
 
-        <text x="26" y="335" textAnchor="middle" fill="#e0f2fe" fontSize="16" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.45s', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Tools</text>
+                  <text x="26" y="335" textAnchor="middle" fill="#e0f2fe" fontSize="16" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.45s', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Tools</text>
 
-        <text x="-38" y="131" textAnchor="end" fill="#e0f2fe" fontSize="17" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.6s', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Solving</text>
+                  <text x="-38" y="131" textAnchor="end" fill="#e0f2fe" fontSize="17" fontFamily="Arial, sans-serif" fontWeight="800" className="hud-label-fade" style={{ animationDelay: '0.6s', filter: 'drop-shadow(0 0 15px rgba(34, 211, 238, 1))' }}>Solving</text>
 
-        {/* Center Line */}
-        <line x1="140" y1="160" x2="140" y2="19" stroke="url(#hudStrokeGradient)" strokeWidth="3.8" opacity="0.74" className="hud-sweep-line" style={{ transformOrigin: '140px 160px', filter: 'drop-shadow(0 0 19px rgba(34, 211, 238, 1))' }} />
+                  {/* Center Line */}
+                  <line x1="140" y1="160" x2="140" y2="19" stroke="url(#hudStrokeGradient)" strokeWidth="3.8" opacity="0.74" className="hud-sweep-line" style={{ transformOrigin: '140px 160px', filter: 'drop-shadow(0 0 19px rgba(34, 211, 238, 1))' }} />
 
-        {/* Center Point */}
-        <circle cx="140" cy="160" r="15" fill="black" stroke="#22d3ee" strokeWidth="4.8" className="hud-center-core" style={{ filter: 'drop-shadow(0 0 26px rgba(34, 211, 238, 1)) url(#intenseGlow)' }} />
-        <circle cx="140" cy="160" r="7" fill="#22d3fe" opacity="1" className="hud-center-inner" />
-      </svg>
-    </div>
+                  {/* Center Point */}
+                  <circle cx="140" cy="160" r="15" fill="black" stroke="#22d3ee" strokeWidth="4.8" className="hud-center-core" style={{ filter: 'drop-shadow(0 0 26px rgba(34, 211, 238, 1)) url(#intenseGlow)' }} />
+                  <circle cx="140" cy="160" r="7" fill="#22d3fe" opacity="1" className="hud-center-inner" />
+                </svg>
+              </div>
 
-    {/* Stats Section */}
-    <div className="mt-4 relative z-10">
-      <div className="h-[1px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent mb-3 hud-stats-divider"></div>
-      <div className="grid grid-cols-5 gap-2 px-1">
-        {[
-          { label: 'FE', value: '90%', delay: '0s' },
-          { label: 'BE', value: '85%', delay: '0.1s' },
-          { label: 'DB', value: '80%', delay: '0.2s' },
-          { label: 'SV', value: '88%', delay: '0.3s' },
-          { label: 'TL', value: '92%', delay: '0.4s' }
-        ].map((stat, i) => (
-          <div key={i} className="text-center group/hud-stat">
-            <div className="text-sm font-mono font-black text-cyan-300 group-hover/hud-stat:text-cyan-200 transition-colors duration-300 hud-stat-value" style={{ animationDelay: stat.delay, textShadow: '0 0 13px rgba(34, 211, 238, 0.75)', filter: `drop-shadow(0 0 ${i % 2 === 0 ? '11' : '9'}px rgba(34, 211, 238, 0.65))` }}>
-              {stat.value}
+              {/* Stats Section */}
+              <div className="mt-4 relative z-10">
+                <div className="h-[1px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent mb-3 hud-stats-divider"></div>
+                <div className="grid grid-cols-5 gap-2 px-1">
+                  {[
+                    { label: 'FE', value: '90%', delay: '0s' },
+                    { label: 'BE', value: '85%', delay: '0.1s' },
+                    { label: 'DB', value: '80%', delay: '0.2s' },
+                    { label: 'SV', value: '88%', delay: '0.3s' },
+                    { label: 'TL', value: '92%', delay: '0.4s' }
+                  ].map((stat, i) => (
+                    <div key={i} className="text-center group/hud-stat">
+                      <div className="text-sm font-mono font-black text-cyan-300 group-hover/hud-stat:text-cyan-200 transition-colors duration-300 hud-stat-value" style={{ animationDelay: stat.delay, textShadow: '0 0 13px rgba(34, 211, 238, 0.75)', filter: `drop-shadow(0 0 ${i % 2 === 0 ? '11' : '9'}px rgba(34, 211, 238, 0.65))` }}>
+                        {stat.value}
+                      </div>
+                      <div className="text-[9px] font-mono font-bold text-blue-400/70 mt-1 tracking-wider hud-stat-label">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
             </div>
-            <div className="text-[9px] font-mono font-bold text-blue-400/70 mt-1 tracking-wider hud-stat-label">{stat.label}</div>
           </div>
-        ))}
-      </div>
-    </div>
-
-  </div>
-</div>
         </div>
 
         {/* MOBILE SKILL CARDS */}
@@ -1404,89 +1404,71 @@ export default function Home() {
             ))}
 
             {/* 🌤️ WEATHER DETECTOR COMING SOON CARD - POSITIONED RIGHT */}
-            <div className="group relative bg-gradient-to-br from-slate-900/95 via-cyan-950/30 to-slate-900/95 rounded-2xl border border-cyan-500/20 overflow-hidden hover:border-cyan-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 hover:-translate-y-2 coming-soon-card md:col-start-2 lg:col-start-3 md:translate-x-12 lg:translate-x-16">
+            <div className="group relative bg-gradient-to-br from-slate-900/95 via-green-950/40 to-slate-900/95 rounded-2xl border border-white/10 overflow-hidden hover:border-green-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-green-500/20 hover:-translate-y-2 md:col-start-2 lg:col-start-3 md:translate-x-12 lg:translate-x-16">
 
-              {/* Animated Background Pattern */}
-              <div className="relative h-52 overflow-hidden bg-gradient-to-br from-cyan-900/20 via-slate-900 to-blue-900/20">
+              {/* 🖼️ IMAGE SECTION */}
+              <div className="relative h-52 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-600/20 via-transparent to-emerald-600/20 z-10"></div>
 
-                {/* Floating Particles Animation */}
-                <div className="absolute inset-0 overflow-hidden">
-                  <div className="particle-1 absolute w-2 h-2 bg-cyan-400/60 rounded-full blur-sm"></div>
-                  <div className="particle-2 absolute w-3 h-3 bg-blue-400/50 rounded-full blur-sm"></div>
-                  <div className="particle-3 absolute w-2 h-2 bg-cyan-300/70 rounded-full blur-sm"></div>
-                  <div className="particle-4 absolute w-2.5 h-2.5 bg-blue-300/60 rounded-full blur-sm"></div>
-                  <div className="particle-5 absolute w-1.5 h-1.5 bg-cyan-500/80 rounded-full blur-sm"></div>
-                </div>
+                <Image
+                  src="/wew.png"
+                  alt="Weather Detector"
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
 
-                {/* Grid Pattern Overlay */}
-                <div className="absolute inset-0 opacity-10" style={{
-                  backgroundImage: `linear-gradient(rgba(34, 211, 238, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 211, 238, 0.3) 1px, transparent 1px)`,
-                  backgroundSize: '20px 20px'
-                }}></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 z-20"></div>
 
-                {/* Pulsing Glow Effect */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-cyan-500/30 rounded-full blur-3xl pulse-glow"></div>
-
-                {/* Central Icon Container - REACT ICON FOR WEATHER DETECTOR */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-                  <div className="relative">
-                    {/* Rotating Ring */}
-                    <div className="absolute inset-0 w-24 h-24 border-2 border-dashed border-cyan-400/50 rounded-full rotate-ring"></div>
-
-                    {/* React Icon for Weather Detector */}
-                    <div className="relative w-24 h-24 flex items-center justify-center">
-                      <FaReact className="text-6xl text-cyan-400 rocket-icon-bounce drop-shadow-[0_0_30px_rgba(34,211,238,0.9)]" />
-
-                      {/* Orbiting Dots */}
-                      <div className="absolute inset-0">
-                        <div className="orbit-dot-1 absolute w-2 h-2 bg-cyan-300 rounded-full top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-                        <div className="orbit-dot-2 absolute w-2 h-2 bg-blue-300 rounded-full top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-                        <div className="orbit-dot-3 absolute w-2 h-2 bg-cyan-400 rounded-full top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-                      </div>
-                    </div>
-                  </div>
+                {/* Top Dots - Green */}
+                <div className="absolute top-4 right-4 flex gap-1.5 z-30">
+                  <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                  <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
+                  <div className="w-2 h-2 rounded-full bg-teal-400"></div>
                 </div>
               </div>
 
-              {/* Content Section - WEATHER DETECTOR SPECIFIC */}
-              <div className="p-6 bg-gradient-to-b from-transparent to-cyan-950/20">
-                <h3 className="text-2xl font-bold shimmer-text mb-2 text-center">
-                  Weather Detector
+              {/* 📝 CONTENT - NO BACKGROUND! (LIKE CARD 1!) */}
+              <div className="p-6">
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
+                  Weather Forecast
                 </h3>
 
-                <p className="text-cyan-200/80 text-sm text-center leading-relaxed mb-4">
-                  Real-time weather app in development<span className="typing-cursor text-cyan-400 ml-0.5">|</span>
+                {/* Description */}
+                <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
+                  Real-time weather Web App with location-based forecasts and Quick Updates
                 </p>
 
-                {/* Tech Stack Badge - React */}
-                <div className="flex justify-center mb-4">
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-cyan-500/10 border border-cyan-500/30 rounded-lg">
-                    <FaReact className="text-cyan-400 text-base" />
-                    <span className="text-xs text-cyan-300 font-medium">React</span>
-                  </div>
+                {/* Tech Tags */}
+                <div className="flex flex-wrap gap-2 mb-5">
+                  <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
+                    Next.js
+                  </span>
+                  <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
+                    Weather API
+                  </span>
+                  <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
+                    Live Updates
+                  </span>
                 </div>
 
-                {/* Decorative Elements */}
-                <div className="flex justify-center gap-2 mb-4">
-                  <div className="w-8 h-1 bg-gradient-to-r from-transparent to-cyan-400/60 rounded-full"></div>
-                  <div className="w-8 h-1 bg-cyan-400/80 rounded-full"></div>
-                  <div className="w-8 h-1 bg-gradient-to-l from-transparent to-cyan-400/60 rounded-full"></div>
-                </div>
-
-                {/* Status Badge */}
-                <div className="flex justify-center">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full">
-                    <div className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
-                    </div>
-                    <span className="text-xs text-cyan-300 font-medium tracking-wide">In Development</span>
-                  </div>
-                </div>
+                {/* View Project Link - Green */}
+                <a
+                  href="https://ns-weather.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-green-400 text-sm font-semibold hover:text-green-300 transition-colors group/link"
+                >
+                  View Project
+                  <FaExternalLinkAlt className="text-xs group-hover/link:translate-x-1 transition-transform" />
+                  <span className="text-lg group-hover/link:translate-x-2 transition-transform">→</span>
+                </a>
               </div>
 
-              {/* Bottom glow effect */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent blur-sm opacity-50 group-hover:w-60 group-hover:opacity-100 transition-all duration-500"></div>
+              {/* Bottom Glow Line */}
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent blur-sm opacity-50 group-hover:w-60 group-hover:opacity-100 transition-all duration-500"></div>
             </div>
           </div>
         </div>
