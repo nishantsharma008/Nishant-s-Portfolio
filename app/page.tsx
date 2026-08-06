@@ -1465,7 +1465,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 via-transparent to-amber-600/20 z-10"></div>
 
         <Image
-          src="/nishant-cinema.png"
+          src="/cinema.png"
           alt="Nishant's Cinema"
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
@@ -1488,18 +1488,21 @@ export default function Home() {
         </h3>
 
         <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
-          Serverless reverse proxy on Vercel Edge with real-time content rebranding and custom UI injection
+          Watch More. Wait Less. High-quality movies and TV shows, instantly available whenever you want.
         </p>
 
         <div className="flex flex-wrap gap-2 mb-5">
           <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
-            Vercel Edge
-          </span>
-          <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
-            Proxy
-          </span>
-          <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
             Next.js
+          </span>
+          <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
+            TMDB API
+          </span>
+          <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
+            Live Fetch
+          </span>
+          <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
+            Fast Player
           </span>
         </div>
 
