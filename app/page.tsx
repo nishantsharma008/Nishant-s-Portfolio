@@ -1245,9 +1245,9 @@ export default function Home() {
 
         {/* PROJECTS GRID - SMART AI + WEATHER FORECAST (ROW 1) + NISHANT'S CINEMA (ROW 2) */}
 <div className="relative">
-  {/* 🆕 ANIMATED DOTTED CONNECTION LINE BETWEEN CARDS (SHIFTED RIGHT BY +35px) */}
-  <div className="connection-line-container hidden lg:block absolute inset-0 pointer-events-none z-20" style={{ top: '120px' }}>
-    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 400" preserveAspectRatio="none" style={{ overflow: 'visible' }}>
+  {/* 🆕 ANIMATED DOTTED CONNECTION LINE — CENTERED BETWEEN UPPER TWO CARDS */}
+  <div className="connection-line-container hidden lg:block absolute pointer-events-none z-20" style={{ top: '180px', left: 0, right: 0, height: '150px' }}>
+    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 200" preserveAspectRatio="none" style={{ overflow: 'visible' }}>
       <defs>
         {/* Gradient for dotted line */}
         <linearGradient id="connectionLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -1278,9 +1278,9 @@ export default function Home() {
         </filter>
       </defs>
 
-      {/* Main curved dotted path - SHIFTED RIGHT by 35px */}
+      {/* Main curved dotted path */}
       <path
-        d="M 455 200 Q 632 152, 792 200"
+        d="M 455 100 Q 632 52, 792 100"
         fill="none"
         stroke="url(#connectionLineGradient)"
         strokeWidth="2"
@@ -1290,9 +1290,9 @@ export default function Home() {
         className="dotted-path-base"
       />
 
-      {/* Secondary glowing path overlay - SHIFTED RIGHT by 35px */}
+      {/* Secondary glowing path overlay */}
       <path
-        d="M 455 200 Q 632 152, 792 200"
+        d="M 455 100 Q 632 52, 792 100"
         fill="none"
         stroke="url(#connectionLineGradient)"
         strokeWidth="3"
@@ -1301,30 +1301,24 @@ export default function Home() {
         className="dotted-path-glow"
       />
 
-      {/* Animated traveling dot 1 */}
+      {/* Animated traveling dots */}
       <circle r="5" fill="#22d3ee" filter="url(#dotGlow)" className="traveling-dot dot-1" />
-
-      {/* Animated traveling dot 2 */}
       <circle r="4" fill="#a855f7" filter="url(#dotGlow)" className="traveling-dot dot-2" />
-
-      {/* Animated traveling dot 3 */}
       <circle r="5" fill="#06b6d4" filter="url(#dotGlow)" className="traveling-dot dot-3" />
-
-      {/* Animated traveling dot 4 */}
       <circle r="3.5" fill="#c084fc" filter="url(#dotGlow)" className="traveling-dot dot-4" />
 
-      {/* Start endpoint marker (SHIFTED RIGHT) */}
+      {/* Start endpoint marker */}
       <g className="endpoint-start">
-        <circle cx="455" cy="200" r="10" fill="#06b6d4" opacity="0.15" className="endpoint-pulse-outer" />
-        <circle cx="455" cy="200" r="6" fill="#06b6d4" opacity="0.3" className="endpoint-pulse-middle" />
-        <circle cx="455" cy="200" r="3" fill="#22d3ee" filter="url(#endpointGlow)" className="endpoint-core" />
+        <circle cx="455" cy="100" r="10" fill="#06b6d4" opacity="0.15" className="endpoint-pulse-outer" />
+        <circle cx="455" cy="100" r="6" fill="#06b6d4" opacity="0.3" className="endpoint-pulse-middle" />
+        <circle cx="455" cy="100" r="3" fill="#22d3ee" filter="url(#endpointGlow)" className="endpoint-core" />
       </g>
 
-      {/* End endpoint marker (SHIFTED RIGHT) */}
+      {/* End endpoint marker */}
       <g className="endpoint-end">
-        <circle cx="792" cy="200" r="10" fill="#a855f7" opacity="0.15" className="endpoint-pulse-outer-end" />
-        <circle cx="792" cy="200" r="6" fill="#a855f7" opacity="0.3" className="endpoint-pulse-middle-end" />
-        <circle cx="792" cy="200" r="3" fill="#c084fc" filter="url(#endpointGlow)" className="endpoint-core-end" />
+        <circle cx="792" cy="100" r="10" fill="#a855f7" opacity="0.15" className="endpoint-pulse-outer-end" />
+        <circle cx="792" cy="100" r="6" fill="#a855f7" opacity="0.3" className="endpoint-pulse-middle-end" />
+        <circle cx="792" cy="100" r="3" fill="#c084fc" filter="url(#endpointGlow)" className="endpoint-core-end" />
       </g>
     </svg>
   </div>
@@ -1336,14 +1330,10 @@ export default function Home() {
         key={index}
         className="group relative bg-gradient-to-br from-slate-900/95 via-purple-950/40 to-slate-900/95 rounded-2xl border border-white/10 overflow-hidden hover:border-purple-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-2"
       >
-
-        {/* Project Image - ACTUAL SCREENSHOT */}
+        {/* Project Image */}
         <div className="relative h-52 overflow-hidden">
-          <div
-            className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-transparent to-indigo-600/20 z-10"
-          ></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-transparent to-indigo-600/20 z-10"></div>
 
-          {/* Real Project Screenshot */}
           <Image
             src={project.image}
             alt={project.title}
@@ -1353,10 +1343,8 @@ export default function Home() {
             className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
           />
 
-          {/* Overlay on hover */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 z-20"></div>
 
-          {/* Top dots indicator */}
           <div className="absolute top-4 right-4 flex gap-1.5 z-30">
             <div className="w-2 h-2 rounded-full bg-purple-400"></div>
             <div className="w-2 h-2 rounded-full bg-pink-400"></div>
@@ -1364,7 +1352,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Content */}
         <div className="p-6">
           <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
             {project.title}
@@ -1374,7 +1361,6 @@ export default function Home() {
             {project.description}
           </p>
 
-          {/* Tech Tags */}
           <div className="flex flex-wrap gap-2 mb-5">
             {project.tags.map((tag, tagIndex) => (
               <span
@@ -1386,7 +1372,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* View Project Link - LIVE HYPERLINK */}
           <a
             href={project.link}
             target="_blank"
@@ -1399,7 +1384,6 @@ export default function Home() {
           </a>
         </div>
 
-        {/* Bottom glow effect */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent blur-sm opacity-50 group-hover:w-60 group-hover:opacity-100 transition-all duration-500"></div>
       </div>
     ))}
@@ -1416,12 +1400,12 @@ export default function Home() {
           alt="Weather Detector"
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          unoptimized
           className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 z-20"></div>
 
-        {/* Top Dots - Green */}
         <div className="absolute top-4 right-4 flex gap-1.5 z-30">
           <div className="w-2 h-2 rounded-full bg-green-400"></div>
           <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
@@ -1429,20 +1413,15 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 📝 CONTENT */}
       <div className="p-6">
-
-        {/* Title */}
         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
           Weather Forecast
         </h3>
 
-        {/* Description */}
         <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
           Real-time weather Web App with location-based forecasts and Quick Updates
         </p>
 
-        {/* Tech Tags */}
         <div className="flex flex-wrap gap-2 mb-5">
           <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
             Next.js
@@ -1455,7 +1434,6 @@ export default function Home() {
           </span>
         </div>
 
-        {/* View Project Link - Green */}
         <a
           href="https://ns-weather.vercel.app/"
           target="_blank"
@@ -1468,12 +1446,11 @@ export default function Home() {
         </a>
       </div>
 
-      {/* Bottom Glow Line */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent blur-sm opacity-50 group-hover:w-60 group-hover:opacity-100 transition-all duration-500"></div>
     </div>
 
-    {/* 🟠 CARD 3 - ORANGE (Nishant's Cinema) — ROW 2, COLUMN 1 (new row, below Card 1) */}
-    <div className="group relative bg-gradient-to-br from-slate-900/95 via-orange-950/40 to-slate-900/95 rounded-2xl border border-white/10 overflow-hidden hover:border-orange-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/20 hover:-translate-y-2 md:col-start-1 lg:col-start-1 mt-8 md:mt-0">
+    {/* 🟠 CARD 3 - ORANGE (Nishant's Cinema) — ROW 2, COLUMN 1 (new row) */}
+    <div className="group relative bg-gradient-to-br from-slate-900/95 via-orange-950/40 to-slate-900/95 rounded-2xl border border-white/10 overflow-hidden hover:border-orange-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/20 hover:-translate-y-2 md:col-start-1 lg:col-start-1">
 
       {/* 🖼️ IMAGE SECTION */}
       <div className="relative h-52 overflow-hidden">
@@ -1484,12 +1461,12 @@ export default function Home() {
           alt="Nishant's Cinema"
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          unoptimized
           className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 z-20"></div>
 
-        {/* Top Dots - Orange */}
         <div className="absolute top-4 right-4 flex gap-1.5 z-30">
           <div className="w-2 h-2 rounded-full bg-orange-400"></div>
           <div className="w-2 h-2 rounded-full bg-amber-400"></div>
@@ -1497,20 +1474,15 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 📝 CONTENT */}
       <div className="p-6">
-
-        {/* Title */}
         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors">
           Nishant&apos;s Cinema
         </h3>
 
-        {/* Description */}
         <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
           Serverless reverse proxy on Vercel Edge with real-time content rebranding and custom UI injection
         </p>
 
-        {/* Tech Tags */}
         <div className="flex flex-wrap gap-2 mb-5">
           <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
             Vercel Edge
@@ -1523,7 +1495,6 @@ export default function Home() {
           </span>
         </div>
 
-        {/* View Project Link - Orange */}
         <a
           href="https://nishant-cinema.vercel.app/"
           target="_blank"
@@ -1536,7 +1507,6 @@ export default function Home() {
         </a>
       </div>
 
-      {/* Bottom Glow Line - Orange */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent blur-sm opacity-50 group-hover:w-60 group-hover:opacity-100 transition-all duration-500"></div>
     </div>
   </div>
