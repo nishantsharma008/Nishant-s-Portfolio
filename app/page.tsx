@@ -1243,235 +1243,304 @@ export default function Home() {
           </p>
         </div>
 
-        {/* PROJECTS GRID - SMART AI CAREER ADVISOR + WEATHER DETECTOR COMING SOON */}
-        <div className="relative">
-          {/* 🆕 ANIMATED DOTTED CONNECTION LINE BETWEEN CARDS (SHIFTED RIGHT BY +35px) */}
-          <div className="connection-line-container hidden lg:block absolute inset-0 pointer-events-none z-20" style={{ top: '120px' }}>
-            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 400" preserveAspectRatio="none" style={{ overflow: 'visible' }}>
-              <defs>
-                {/* Gradient for dotted line */}
-                <linearGradient id="connectionLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#06b6d4" stopOpacity="1" />
-                  <stop offset="50%" stopColor="#a855f7" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#06b6d4" stopOpacity="1" />
-                </linearGradient>
+        {/* PROJECTS GRID - SMART AI + WEATHER FORECAST (ROW 1) + NISHANT'S CINEMA (ROW 2) */}
+<div className="relative">
+  {/* 🆕 ANIMATED DOTTED CONNECTION LINE BETWEEN CARDS (SHIFTED RIGHT BY +35px) */}
+  <div className="connection-line-container hidden lg:block absolute inset-0 pointer-events-none z-20" style={{ top: '120px' }}>
+    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 400" preserveAspectRatio="none" style={{ overflow: 'visible' }}>
+      <defs>
+        {/* Gradient for dotted line */}
+        <linearGradient id="connectionLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#06b6d4" stopOpacity="1" />
+          <stop offset="50%" stopColor="#a855f7" stopOpacity="1" />
+          <stop offset="100%" stopColor="#06b6d4" stopOpacity="1" />
+        </linearGradient>
 
-                {/* Glow filter for dots */}
-                <filter id="dotGlow" x="-50%" y="-50%" width="200%" height="200%">
-                  <feGaussianBlur stdDeviation="3" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
+        {/* Glow filter for dots */}
+        <filter id="dotGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
 
-                {/* Intense glow filter for endpoints */}
-                <filter id="endpointGlow" x="-100%" y="-100%" width="300%" height="300%">
-                  <feGaussianBlur stdDeviation="6" result="blur" />
-                  <feComponentTransfer in="blur" result="boost">
-                    <feFuncA type="linear" slope="1.5" />
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode in="boost" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
+        {/* Intense glow filter for endpoints */}
+        <filter id="endpointGlow" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="6" result="blur" />
+          <feComponentTransfer in="blur" result="boost">
+            <feFuncA type="linear" slope="1.5" />
+          </feComponentTransfer>
+          <feMerge>
+            <feMergeNode in="boost" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
 
-              {/* Main curved dotted path - SHIFTED RIGHT by 35px */}
-              <path
-                d="M 455 200 Q 632 152, 792 200"
-                fill="none"
-                stroke="url(#connectionLineGradient)"
-                strokeWidth="2"
-                strokeDasharray="6, 12"
-                strokeDashoffset="0"
-                opacity="0.6"
-                className="dotted-path-base"
-              />
+      {/* Main curved dotted path - SHIFTED RIGHT by 35px */}
+      <path
+        d="M 455 200 Q 632 152, 792 200"
+        fill="none"
+        stroke="url(#connectionLineGradient)"
+        strokeWidth="2"
+        strokeDasharray="6, 12"
+        strokeDashoffset="0"
+        opacity="0.6"
+        className="dotted-path-base"
+      />
 
-              {/* Secondary glowing path overlay - SHIFTED RIGHT by 35px */}
-              <path
-                d="M 455 200 Q 632 152, 792 200"
-                fill="none"
-                stroke="url(#connectionLineGradient)"
-                strokeWidth="3"
-                strokeDasharray="2, 18"
-                opacity="0.3"
-                className="dotted-path-glow"
-              />
+      {/* Secondary glowing path overlay - SHIFTED RIGHT by 35px */}
+      <path
+        d="M 455 200 Q 632 152, 792 200"
+        fill="none"
+        stroke="url(#connectionLineGradient)"
+        strokeWidth="3"
+        strokeDasharray="2, 18"
+        opacity="0.3"
+        className="dotted-path-glow"
+      />
 
-              {/* Animated traveling dot 1 */}
-              <circle r="5" fill="#22d3ee" filter="url(#dotGlow)" className="traveling-dot dot-1" />
+      {/* Animated traveling dot 1 */}
+      <circle r="5" fill="#22d3ee" filter="url(#dotGlow)" className="traveling-dot dot-1" />
 
-              {/* Animated traveling dot 2 */}
-              <circle r="4" fill="#a855f7" filter="url(#dotGlow)" className="traveling-dot dot-2" />
+      {/* Animated traveling dot 2 */}
+      <circle r="4" fill="#a855f7" filter="url(#dotGlow)" className="traveling-dot dot-2" />
 
-              {/* Animated traveling dot 3 */}
-              <circle r="5" fill="#06b6d4" filter="url(#dotGlow)" className="traveling-dot dot-3" />
+      {/* Animated traveling dot 3 */}
+      <circle r="5" fill="#06b6d4" filter="url(#dotGlow)" className="traveling-dot dot-3" />
 
-              {/* Animated traveling dot 4 */}
-              <circle r="3.5" fill="#c084fc" filter="url(#dotGlow)" className="traveling-dot dot-4" />
+      {/* Animated traveling dot 4 */}
+      <circle r="3.5" fill="#c084fc" filter="url(#dotGlow)" className="traveling-dot dot-4" />
 
-              {/* Start endpoint marker (SHIFTED RIGHT) */}
-              <g className="endpoint-start">
-                <circle cx="455" cy="200" r="10" fill="#06b6d4" opacity="0.15" className="endpoint-pulse-outer" />
-                <circle cx="455" cy="200" r="6" fill="#06b6d4" opacity="0.3" className="endpoint-pulse-middle" />
-                <circle cx="455" cy="200" r="3" fill="#22d3ee" filter="url(#endpointGlow)" className="endpoint-core" />
-              </g>
+      {/* Start endpoint marker (SHIFTED RIGHT) */}
+      <g className="endpoint-start">
+        <circle cx="455" cy="200" r="10" fill="#06b6d4" opacity="0.15" className="endpoint-pulse-outer" />
+        <circle cx="455" cy="200" r="6" fill="#06b6d4" opacity="0.3" className="endpoint-pulse-middle" />
+        <circle cx="455" cy="200" r="3" fill="#22d3ee" filter="url(#endpointGlow)" className="endpoint-core" />
+      </g>
 
-              {/* End endpoint marker (SHIFTED RIGHT) */}
-              <g className="endpoint-end">
-                <circle cx="792" cy="200" r="10" fill="#a855f7" opacity="0.15" className="endpoint-pulse-outer-end" />
-                <circle cx="792" cy="200" r="6" fill="#a855f7" opacity="0.3" className="endpoint-pulse-middle-end" />
-                <circle cx="792" cy="200" r="3" fill="#c084fc" filter="url(#endpointGlow)" className="endpoint-core-end" />
-              </g>
-            </svg>
-          </div>
+      {/* End endpoint marker (SHIFTED RIGHT) */}
+      <g className="endpoint-end">
+        <circle cx="792" cy="200" r="10" fill="#a855f7" opacity="0.15" className="endpoint-pulse-outer-end" />
+        <circle cx="792" cy="200" r="6" fill="#a855f7" opacity="0.3" className="endpoint-pulse-middle-end" />
+        <circle cx="792" cy="200" r="3" fill="#c084fc" filter="url(#endpointGlow)" className="endpoint-core-end" />
+      </g>
+    </svg>
+  </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project, index) => (
-              <div
-                key={index}
-                className="group relative bg-gradient-to-br from-slate-900/95 via-purple-950/40 to-slate-900/95 rounded-2xl border border-white/10 overflow-hidden hover:border-purple-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-2"
-              >
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {/* 🟣 CARD 1 - PURPLE (Smart AI Career Advisor) — ROW 1, COLUMN 1 */}
+    {filteredProjects.map((project, index) => (
+      <div
+        key={index}
+        className="group relative bg-gradient-to-br from-slate-900/95 via-purple-950/40 to-slate-900/95 rounded-2xl border border-white/10 overflow-hidden hover:border-purple-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-2"
+      >
 
-                {/* Project Image - ACTUAL SCREENSHOT */}
-                <div className="relative h-52 overflow-hidden">
-                  <div
-                    className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-transparent to-indigo-600/20 z-10"
-                  ></div>
+        {/* Project Image - ACTUAL SCREENSHOT */}
+        <div className="relative h-52 overflow-hidden">
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-transparent to-indigo-600/20 z-10"
+          ></div>
 
-                  {/* Real Project Screenshot */}
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                    unoptimized
-                    className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
+          {/* Real Project Screenshot */}
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+            unoptimized
+            className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
+          />
 
-                  {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 z-20"></div>
+          {/* Overlay on hover */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 z-20"></div>
 
-                  {/* Top dots indicator */}
-                  <div className="absolute top-4 right-4 flex gap-1.5 z-30">
-                    <div className="w-2 h-2 rounded-full bg-purple-400"></div>
-                    <div className="w-2 h-2 rounded-full bg-pink-400"></div>
-                    <div className="w-2 h-2 rounded-full bg-indigo-400"></div>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
-
-                  {/* Tech Tags */}
-                  <div className="flex flex-wrap gap-2 mb-5">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* View Project Link - LIVE HYPERLINK */}
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-purple-400 text-sm font-semibold hover:text-purple-300 transition-colors group/link"
-                  >
-                    View Project
-                    <FaExternalLinkAlt className="text-xs group-hover/link:translate-x-1 group-hover/link:-translate-x-0 transition-transform" />
-                    <span className="text-lg group-hover/link:translate-x-2 transition-transform">→</span>
-                  </a>
-                </div>
-
-                {/* Bottom glow effect */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent blur-sm opacity-50 group-hover:w-60 group-hover:opacity-100 transition-all duration-500"></div>
-              </div>
-            ))}
-
-            {/* 🌤️ WEATHER DETECTOR COMING SOON CARD - POSITIONED RIGHT */}
-            <div className="group relative bg-gradient-to-br from-slate-900/95 via-green-950/40 to-slate-900/95 rounded-2xl border border-white/10 overflow-hidden hover:border-green-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-green-500/20 hover:-translate-y-2 md:col-start-2 lg:col-start-3 md:translate-x-12 lg:translate-x-16">
-
-              {/* 🖼️ IMAGE SECTION */}
-              <div className="relative h-52 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-green-600/20 via-transparent to-emerald-600/20 z-10"></div>
-
-                <Image
-                  src="/wew.png"
-                  alt="Weather Detector"
-                  fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                  className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 z-20"></div>
-
-                {/* Top Dots - Green */}
-                <div className="absolute top-4 right-4 flex gap-1.5 z-30">
-                  <div className="w-2 h-2 rounded-full bg-green-400"></div>
-                  <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
-                  <div className="w-2 h-2 rounded-full bg-teal-400"></div>
-                </div>
-              </div>
-
-              {/* 📝 CONTENT - NO BACKGROUND! (LIKE CARD 1!) */}
-              <div className="p-6">
-
-                {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
-                  Weather Forecast
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
-                  Real-time weather Web App with location-based forecasts and Quick Updates
-                </p>
-
-                {/* Tech Tags */}
-                <div className="flex flex-wrap gap-2 mb-5">
-                  <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
-                    Next.js
-                  </span>
-                  <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
-                    Weather API
-                  </span>
-                  <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
-                    Live Updates
-                  </span>
-                </div>
-
-                {/* View Project Link - Green */}
-                <a
-                  href="https://ns-weather.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-green-400 text-sm font-semibold hover:text-green-300 transition-colors group/link"
-                >
-                  View Project
-                  <FaExternalLinkAlt className="text-xs group-hover/link:translate-x-1 transition-transform" />
-                  <span className="text-lg group-hover/link:translate-x-2 transition-transform">→</span>
-                </a>
-              </div>
-
-              {/* Bottom Glow Line */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent blur-sm opacity-50 group-hover:w-60 group-hover:opacity-100 transition-all duration-500"></div>
-            </div>
+          {/* Top dots indicator */}
+          <div className="absolute top-4 right-4 flex gap-1.5 z-30">
+            <div className="w-2 h-2 rounded-full bg-purple-400"></div>
+            <div className="w-2 h-2 rounded-full bg-pink-400"></div>
+            <div className="w-2 h-2 rounded-full bg-indigo-400"></div>
           </div>
         </div>
+
+        {/* Content */}
+        <div className="p-6">
+          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+            {project.title}
+          </h3>
+
+          <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-2">
+            {project.description}
+          </p>
+
+          {/* Tech Tags */}
+          <div className="flex flex-wrap gap-2 mb-5">
+            {project.tags.map((tag, tagIndex) => (
+              <span
+                key={tagIndex}
+                className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          {/* View Project Link - LIVE HYPERLINK */}
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-purple-400 text-sm font-semibold hover:text-purple-300 transition-colors group/link"
+          >
+            View Project
+            <FaExternalLinkAlt className="text-xs group-hover/link:translate-x-1 group-hover/link:-translate-x-0 transition-transform" />
+            <span className="text-lg group-hover/link:translate-x-2 transition-transform">→</span>
+          </a>
+        </div>
+
+        {/* Bottom glow effect */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent blur-sm opacity-50 group-hover:w-60 group-hover:opacity-100 transition-all duration-500"></div>
+      </div>
+    ))}
+
+    {/* 🟢 CARD 2 - GREEN (Weather Forecast) — ROW 1, COLUMN 3 (offset right) */}
+    <div className="group relative bg-gradient-to-br from-slate-900/95 via-green-950/40 to-slate-900/95 rounded-2xl border border-white/10 overflow-hidden hover:border-green-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-green-500/20 hover:-translate-y-2 md:col-start-2 lg:col-start-3 md:translate-x-12 lg:translate-x-16">
+
+      {/* 🖼️ IMAGE SECTION */}
+      <div className="relative h-52 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-600/20 via-transparent to-emerald-600/20 z-10"></div>
+
+        <Image
+          src="/wew.png"
+          alt="Weather Detector"
+          fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 z-20"></div>
+
+        {/* Top Dots - Green */}
+        <div className="absolute top-4 right-4 flex gap-1.5 z-30">
+          <div className="w-2 h-2 rounded-full bg-green-400"></div>
+          <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
+          <div className="w-2 h-2 rounded-full bg-teal-400"></div>
+        </div>
+      </div>
+
+      {/* 📝 CONTENT */}
+      <div className="p-6">
+
+        {/* Title */}
+        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-300 transition-colors">
+          Weather Forecast
+        </h3>
+
+        {/* Description */}
+        <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
+          Real-time weather Web App with location-based forecasts and Quick Updates
+        </p>
+
+        {/* Tech Tags */}
+        <div className="flex flex-wrap gap-2 mb-5">
+          <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
+            Next.js
+          </span>
+          <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
+            Weather API
+          </span>
+          <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
+            Live Updates
+          </span>
+        </div>
+
+        {/* View Project Link - Green */}
+        <a
+          href="https://ns-weather.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-green-400 text-sm font-semibold hover:text-green-300 transition-colors group/link"
+        >
+          View Project
+          <FaExternalLinkAlt className="text-xs group-hover/link:translate-x-1 transition-transform" />
+          <span className="text-lg group-hover/link:translate-x-2 transition-transform">→</span>
+        </a>
+      </div>
+
+      {/* Bottom Glow Line */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent blur-sm opacity-50 group-hover:w-60 group-hover:opacity-100 transition-all duration-500"></div>
+    </div>
+
+    {/* 🟠 CARD 3 - ORANGE (Nishant's Cinema) — ROW 2, COLUMN 1 (new row, below Card 1) */}
+    <div className="group relative bg-gradient-to-br from-slate-900/95 via-orange-950/40 to-slate-900/95 rounded-2xl border border-white/10 overflow-hidden hover:border-orange-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/20 hover:-translate-y-2 md:col-start-1 lg:col-start-1 mt-8 md:mt-0">
+
+      {/* 🖼️ IMAGE SECTION */}
+      <div className="relative h-52 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 via-transparent to-amber-600/20 z-10"></div>
+
+        <Image
+          src="/nishant-cinema.png"
+          alt="Nishant's Cinema"
+          fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 z-20"></div>
+
+        {/* Top Dots - Orange */}
+        <div className="absolute top-4 right-4 flex gap-1.5 z-30">
+          <div className="w-2 h-2 rounded-full bg-orange-400"></div>
+          <div className="w-2 h-2 rounded-full bg-amber-400"></div>
+          <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
+        </div>
+      </div>
+
+      {/* 📝 CONTENT */}
+      <div className="p-6">
+
+        {/* Title */}
+        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors">
+          Nishant&apos;s Cinema
+        </h3>
+
+        {/* Description */}
+        <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
+          Serverless reverse proxy on Vercel Edge with real-time content rebranding and custom UI injection
+        </p>
+
+        {/* Tech Tags */}
+        <div className="flex flex-wrap gap-2 mb-5">
+          <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
+            Vercel Edge
+          </span>
+          <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
+            Proxy
+          </span>
+          <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-gray-300 font-mono">
+            Next.js
+          </span>
+        </div>
+
+        {/* View Project Link - Orange */}
+        <a
+          href="https://nishant-cinema.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-orange-400 text-sm font-semibold hover:text-orange-300 transition-colors group/link"
+        >
+          View Project
+          <FaExternalLinkAlt className="text-xs group-hover/link:translate-x-1 transition-transform" />
+          <span className="text-lg group-hover/link:translate-x-2 transition-transform">→</span>
+        </a>
+      </div>
+
+      {/* Bottom Glow Line - Orange */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent blur-sm opacity-50 group-hover:w-60 group-hover:opacity-100 transition-all duration-500"></div>
+    </div>
+  </div>
+</div>
 
         {/* VIEW ALL PROJECTS BUTTON */}
         <div className="mt-16 text-center">
