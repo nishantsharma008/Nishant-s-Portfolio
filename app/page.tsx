@@ -1301,11 +1301,19 @@ export default function Home() {
         className="dotted-path-glow"
       />
 
-      {/* Animated traveling dots */}
-      <circle r="5" fill="#22d3ee" filter="url(#dotGlow)" className="traveling-dot dot-1" />
-      <circle r="4" fill="#a855f7" filter="url(#dotGlow)" className="traveling-dot dot-2" />
-      <circle r="5" fill="#06b6d4" filter="url(#dotGlow)" className="traveling-dot dot-3" />
-      <circle r="3.5" fill="#c084fc" filter="url(#dotGlow)" className="traveling-dot dot-4" />
+      {/* 🔥 Animated traveling dots — now flow along the new curve automatically */}
+      <circle r="5" fill="#22d3ee" filter="url(#dotGlow)">
+        <animateMotion dur="4s" repeatCount="indefinite" path="M 455 100 Q 632 52, 792 100" />
+      </circle>
+      <circle r="4" fill="#a855f7" filter="url(#dotGlow)">
+        <animateMotion dur="4s" repeatCount="indefinite" begin="1s" path="M 792 100 Q 632 52, 455 100" />
+      </circle>
+      <circle r="5" fill="#06b6d4" filter="url(#dotGlow)">
+        <animateMotion dur="4s" repeatCount="indefinite" begin="2s" path="M 455 100 Q 632 52, 792 100" />
+      </circle>
+      <circle r="3.5" fill="#c084fc" filter="url(#dotGlow)">
+        <animateMotion dur="4s" repeatCount="indefinite" begin="3s" path="M 792 100 Q 632 52, 455 100" />
+      </circle>
 
       {/* Start endpoint marker */}
       <g className="endpoint-start">
