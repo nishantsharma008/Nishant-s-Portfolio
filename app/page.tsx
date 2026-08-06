@@ -465,7 +465,7 @@ export default function Home() {
 
                   <div className="absolute top-1/2 right-6 transform -translate-y-1/2">
                     <div className="flex flex-col items-center gap-1">
-                      <span className="text-[9px] font-mono text-blue-400/80 tracking-wider">3+</span>
+                      <span className="text-[9px] font-mono text-blue-400/80 tracking-wider">3+ Projects</span>
                       <div className="w-3 h-3 rounded-full bg-blue-400 node-pulse-delay shadow-lg shadow-blue-400/50"></div>
                     </div>
                   </div>
@@ -480,7 +480,7 @@ export default function Home() {
                   <div className="absolute top-1/2 left-6 transform -translate-y-1/2">
                     <div className="flex flex-col items-center gap-1">
                       <div className="w-3 h-3 rounded-full bg-blue-300 node-pulse-3 shadow-lg shadow-blue-300/50"></div>
-                      <span className="text-[9px] font-mono text-blue-300/80 tracking-wider">YRS</span>
+                      <span className="text-[9px] font-mono text-blue-300/80 tracking-wider">2+ YRS</span>
                     </div>
                   </div>
 
