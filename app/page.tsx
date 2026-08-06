@@ -1365,7 +1365,7 @@ export default function Home() {
             {project.title}
           </h3>
 
-          <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-2">
+          <p className="text-gray-400 text-sm leading-relaxed mb-4">
             {project.description}
           </p>
 
@@ -1426,7 +1426,7 @@ export default function Home() {
           Weather Forecast
         </h3>
 
-        <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
+        <p className="text-gray-300 text-sm leading-relaxed mb-4">
           Real-time weather Web App with location-based forecasts and Quick Updates
         </p>
 
@@ -1487,7 +1487,7 @@ export default function Home() {
           Nishant&apos;s Cinema
         </h3>
 
-        <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
+        <p className="text-gray-300 text-sm leading-relaxed mb-4">
           Watch More. Wait Less. High-quality movies and TV shows, instantly available whenever you want.
         </p>
 
