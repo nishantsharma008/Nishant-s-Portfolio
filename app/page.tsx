@@ -14,17 +14,22 @@ import { SiInfosys, SiNextdotjs, SiTypescript, SiTailwindcss, SiMysql, SiExpress
 import { HiOutlineRocketLaunch, HiOutlineCodeBracket, HiOutlineGlobeAlt, HiOutlineAcademicCap } from "react-icons/hi2";
 import { MdWorkOutline } from "react-icons/md";
 import { PiCertificateBold } from "react-icons/pi";
-import { useEffect, useRef } from "react"; // ✅ Already correct
+import { useEffect, useRef, useState } from "react"; // ← ADDED useState!
 
+// ✅✅✅ DYNAMIC IMPORT WITH SSR DISABLED ✅✅✅
 import dynamic from 'next/dynamic';
 
+// Load Weblex Hero ONLY on client side (no SSR!)
 const WeblexHeroSection = dynamic(
   () => import('./components/WeblexHeroSection'),
   { 
     ssr: false,
     loading: () => (
       <div className="w-full h-screen bg-[#030712] flex items-center justify-center">
-        <div className="text-white text-lg animate-pulse">Loading Experience...</div>
+        <div className="text-center">
+          <div className="inline-block w-12 h-12 border-4 border-[#c7f300] border-t-transparent rounded-full animate-spin mb-4"></div>
+          <p className="text-white text-lg font-medium">Loading Experience...</p>
+        </div>
       </div>
     )
   }
@@ -33,15 +38,24 @@ const WeblexHeroSection = dynamic(
 export default function Home() {
   const router = useRouter();
   const observerRef = useRef<IntersectionObserver | null>(null);
+  
+  // ✅✅✅ CLIENT-SIDE ONLY CHECK ✅✅✅
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true); // Now we're safe to use window!
+  }, []);
+
+  // Don't run anything with window until mounted
+  useEffect(() => {
+    if (!isMounted) return; // ← ADD THIS LINE!
+    
     const observerOptions = {
       root: null,
       rootMargin: '0px',
       threshold: 0.15
     };
 
-    // ✅ No more red errors here!
     observerRef.current = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -50,20 +64,22 @@ export default function Home() {
       });
     }, observerOptions);
 
-    // ✅ No more red errors here!
     const sections = document.querySelectorAll('.scroll-animate');
     sections.forEach(section => {
-      observerRef.current?.observe(section);  // Optional chaining for safety
-    });                                                                                                                                                                                                                                                        // Cleanup on unmount
+      observerRef.current?.observe(section);
+    });
+
     return () => {
-      if (observerRef.current) {  // ✅ No more red errors here!
+      if (observerRef.current) {
         observerRef.current.disconnect();
       }
     };
-  }, []);
+  }, [isMounted]); // ← ADD isMounted DEPENDENCY!
 
   // ==================== AOS INITIALIZATION USEEFFECT ====================
   useEffect(() => {
+    if (!isMounted) return; // ← ADD THIS LINE TOO!
+    
     if (typeof window !== 'undefined') {
       AOS.init({
         duration: 800,
@@ -72,7 +88,7 @@ export default function Home() {
         offset: 120,
       });
     }
-  }, []);
+  }, [isMounted]); // ← ADD DEPENDENCY!
 
   // ==================== HELPER FUNCTIONS ====================
   const scrollToNext = () => {
@@ -257,8 +273,10 @@ export default function Home() {
         <Navbar />
       </div>
 
-            {/* ✅✅✅ NEW: WEBLEX DARK HERO SECTION (Full Screen Video + 3D Particles) ✅✅✅ */}
-      <WeblexHeroSection />
+              {/* ✅✅✅ NEW: WEBLEX DARK HERO SECTION (Client-Side Only!) ✅✅✅ */}
+      {isMounted ? <WeblexHeroSection /> : (
+        <section className="w-full h-screen bg-[#030712]" />
+      )}
 
       {/* STATS SECTION */}
       <section id="stats" className="relative max-w-6xl mx-auto px-6 pb-20 -mt-2 sm:mt-3 md:-mt-20 z-10 scroll-animate">
