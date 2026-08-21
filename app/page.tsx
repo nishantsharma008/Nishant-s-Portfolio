@@ -16,10 +16,19 @@ import { MdWorkOutline } from "react-icons/md";
 import { PiCertificateBold } from "react-icons/pi";
 import { useEffect, useRef } from "react"; // ✅ Already correct
 
-// ✅✅✅ NEW IMPORTS - WEBLEX DARK HERO COMPONENTS ✅✅✅
-import VideoBackground from './components/VideoBackground';
-import ParticleField from './components/ParticleField';
-import WeblexHeroSection from './components/WeblexHeroSection';
+import dynamic from 'next/dynamic';
+
+const WeblexHeroSection = dynamic(
+  () => import('./components/WeblexHeroSection'),
+  { 
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-screen bg-[#030712] flex items-center justify-center">
+        <div className="text-white text-lg animate-pulse">Loading Experience...</div>
+      </div>
+    )
+  }
+);
 
 export default function Home() {
   const router = useRouter();
