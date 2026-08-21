@@ -16,6 +16,11 @@ import { MdWorkOutline } from "react-icons/md";
 import { PiCertificateBold } from "react-icons/pi";
 import { useEffect, useRef } from "react"; // ✅ Already correct
 
+// ✅✅✅ NEW IMPORTS - WEBLEX DARK HERO COMPONENTS ✅✅✅
+import VideoBackground from './components/VideoBackground';
+import ParticleField from './components/ParticleField';
+import WeblexHeroSection from './components/WeblexHeroSection';
+
 export default function Home() {
   const router = useRouter();
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -238,100 +243,13 @@ export default function Home() {
 
       <div className="fixed inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(11,15,26,0.5)_100%)]" />
 
-      {/* NAVBAR */}
-      <div className="fixed top-0 left-0 w-full z-50 bg-[#0B0F1A]/30 backdrop-blur-2xl border-b border-white/5 animate-fade-in-down">
+            {/* ✅ UPDATED: NAVBAR - Transparent for Welex Dark Hero */}
+      <div className="fixed top-0 left-0 w-full z-50">
         <Navbar />
       </div>
 
-      {/* HERO SECTION */}
-      <section className="relative grid md:grid-cols-2 items-start md:items-center max-w-6xl mx-auto px-6 pt-12 sm:pt-16 md:pt-20 pb-12 gap-8 md:gap-12 min-h-screen z-10">
-
-        {/* ✅ BADGE MOVED TO TOP-RIGHT - Absolute positioned */}
-        <div
-          className="absolute top-24 sm:top-28 md:top-28 right-4 sm:right-6 lg:-right-40 z-10 fade-in-up-element"
-          style={{ animationDelay: '100ms' }}
-        >
-          <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-white/5 backdrop-blur-md px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-white/10 shadow-lg">
-            <span className="relative flex h-2 w-2 sm:h-2.5 sm:w-2.5 flex-shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 sm:h-2.5 sm:w-2.5 bg-green-500"></span>
-            </span>
-            <span className="text-[11px] sm:text-xs font-medium text-gray-200 whitespace-nowrap">Available to Learn</span>
-          </div>
-        </div>
-
-        <div className="max-w-xl flex flex-col justify-center md:justify-center pt-16 sm:pt-20 md:pt-0">
-
-          <div className="flex items-center gap-2 mb-3 fade-in-up-element" style={{ animationDelay: '200ms' }}>
-            <HiOutlineCodeBracket className="text-cyan-400 text-lg sm:text-xl" />
-            <p className="text-gray-100 text-base sm:text-lg font-medium">Hey! I&apos;m</p>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-3 sm:mb-4 leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] fade-in-up-element" style={{ animationDelay: '300ms' }}>
-            Nishant{" "}
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
-              Sharma
-            </span>
-          </h1>
-
-          <h2 className="text-lg sm:text-xl md:text-2xl text-gray-100 mb-4 sm:mb-6 font-medium drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] fade-in-up-element" style={{ animationDelay: '400ms' }}>
-            Full Stack Developer &{" "}
-            <span className="text-cyan-300">Problem Solver</span>
-          </h2>
-
-          <p className="text-gray-200 mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)] fade-in-up-element" style={{ animationDelay: '500ms' }}>
-            I build exceptional digital experiences that are fast,
-            accessible, visually appealing, and responsive.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-49 mb-6 sm:mb-8 fade-in-up-element" style={{ animationDelay: '600ms' }}>
-            <button
-              onClick={() => {
-                const projectsSection = document.getElementById('projects');
-                if (projectsSection) {
-                  projectsSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="group relative bg-gradient-to-r from-cyan-500 to-blue-500 px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl text-white font-semibold hover:scale-105 transition-transform shadow-lg shadow-cyan-500/30 flex items-center gap-2 text-sm sm:text-base w-fit sm:w-auto overflow-hidden"
-            >
-              {/* Optional: Subtle shine effect on hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 skew-x-12"></div>
-
-              <span className="relative z-10 flex items-center gap-2">
-                View My Work
-                <HiOutlineRocketLaunch className="text-lg sm:text-xl group-hover:rotate-45 transition-transform duration-300" />
-              </span>
-            </button>
-
-            <div className="flex gap-4 sm:gap-5 text-xl sm:text-2xl text-gray-200">
-              <a href="https://www.linkedin.com/in/nishantsharma066/" className="hover:text-cyan-400 cursor-pointer transition-colors"><FaLinkedin /></a>
-              <a href="https://github.com/nishantsharma008" className="hover:text-white cursor-pointer transition-colors"><FaGithub /></a>
-              <a href="https://instagram.com/_nishant._sharma" className="hover:text-pink-500 cursor-pointer transition-colors"><FaInstagram /></a>
-            </div>
-          </div>
-        </div>
-
-        {/* HERO IMAGE */}
-        <div className="flex justify-center md:justify-end relative h-[290px] sm:h-[400px] md:h-auto pb-5 sm:pb-6 md:pb-0 fade-in-up-element">
-          <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 flex items-center justify-center">
-            <div className="absolute w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] md:w-[380px] md:h-[380px] rounded-full bg-cyan-600/40 blur-3xl"></div>
-            <div className="absolute w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] md:w-[320px] md:h-[320px] rounded-full border border-cyan-500/30 animate-spin-slow"></div>
-            <div className="absolute w-[300px] h-[300px] sm:w-[340px] sm:h-[340px] md:w-[360px] md:h-[360px] rounded-full border border-blue-500/30 animate-spin-reverse"></div>
-            <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-cyan-600 to-blue-600 p-1 shadow-[0_0_60px_rgba(14,165,233,0.6)]">
-              <div className="w-full h-full rounded-full bg-[#0B0F1A]/60 backdrop-blur-sm overflow-hidden flex items-center justify-center">
-                <Image
-                  src="/profile.jpeg"
-                  alt="Nishant Sharma"
-                  fill
-                  sizes="(min-width: 768px) 320px, (min-width: 640px) 288px, 256px"
-                  className="object-cover object-[center_23%]"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </section>
+            {/* ✅✅✅ NEW: WEBLEX DARK HERO SECTION (Full Screen Video + 3D Particles) ✅✅✅ */}
+      <WeblexHeroSection />
 
       {/* STATS SECTION */}
       <section id="stats" className="relative max-w-6xl mx-auto px-6 pb-20 -mt-2 sm:mt-3 md:-mt-20 z-10 scroll-animate">
