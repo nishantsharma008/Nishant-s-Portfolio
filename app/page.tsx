@@ -1507,7 +1507,7 @@ export default function Home() {
         </div>
 
         <a
-          href="https://nishant-cinema.vercel.app/"
+          href="https://nishant-cinema.pages.dev/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-orange-400 text-sm font-semibold hover:text-orange-300 transition-colors group/link"
